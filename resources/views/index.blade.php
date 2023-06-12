@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-ads
   <head>
 
     <meta charset="utf-8">
