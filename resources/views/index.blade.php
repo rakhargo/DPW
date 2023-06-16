@@ -53,7 +53,7 @@ https://templatemo.com/tm-589-lugx-gaming
             <div class="col-12">
                 <nav class="main-nav">
                     <!-- ***** Logo Start ***** -->
-                    <a href="index.html" class="logo">
+                    <a href="/" class="logo">
                         <img src="assets/images/logo.png" alt="" style="width: 158px;">
                     </a>
                     <!-- ***** Logo End ***** --> 
@@ -61,7 +61,7 @@ https://templatemo.com/tm-589-lugx-gaming
                     <ul class="nav">
                       <li><a href="/" class="active">Home</a></li>
                       <li><a href="tabVoucher">Our Shop</a></li>
-                      <li><a href="tabRiwayat">Riwayat pesanan</a></li>
+                      <li><a href="tabRiwayat">Lacak pesanan</a></li>
                       <li><a href="tabAdmin">Admin page</a></li>
                   </ul>   
                     <a class='menu-trigger'>
@@ -80,9 +80,9 @@ https://templatemo.com/tm-589-lugx-gaming
       <div class="row">
         <div class="col-lg-6 align-self-center">
           <div class="caption header-text">
-            <h6>Welcome to lugx</h6>
-            <h2>BEST GAMING SITE EVER!</h2>
-            <p>LUGX Gaming is free Bootstrap 5 HTML CSS website template for your gaming websites. You can download and use this layout for commercial purposes. Please tell your friends about TemplateMo.</p>
+            <h6>Welcome to VENTI</h6>
+            <h2>TEMPAT TOPUP VOUCHER TERBAIK!</h2>
+            <p>Bingung topup dimana? VENTI adalah tempatnya! <br> VENTI menyediakan berbagai macam voucher dengan harga yang sangat terjangkau, dan tentu saja aman juga sudah dipercaya banyak orang. <br> <br> Tunggu apa lagi? Topup di VENTI selagi masih hidup waokawoowak</p>
             {{-- <div class="search-input">
               <form id="search" action="#">
                 <input type="text" placeholder="Type Something" id='searchText' name="searchKeyword" onkeypress="handle" />
@@ -92,11 +92,24 @@ https://templatemo.com/tm-589-lugx-gaming
           </div>
         </div>
         <div class="col-lg-4 offset-lg-2">
-          <div class="right-image">
-            <img src="assets/images/banner-image.jpg" alt="">
-            <span class="price">$22</span>
-            <span class="offer">-40%</span>
+
+          <div class="mySlides fade">
+            <img src="assets/images/steam.png" style="width:100%">
           </div>
+          <div class="mySlides fade">
+            <img src="assets/images/google.jpg" style="width:100%">
+          </div>
+          <div class="mySlides fade">
+            <img src="assets/images/rilps.png" style="width:100%">
+          </div>
+          <br>
+
+          <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+          </div>
+
         </div>
       </div>
     </div>
@@ -106,42 +119,42 @@ https://templatemo.com/tm-589-lugx-gaming
     <div class="container">
       <div class="row">
         <div class="col-lg-3 col-md-6">
-          <a href="#">
+          <a>
             <div class="item">
               <div class="image">
-                <img src="assets/images/featured-01.png" alt="" style="max-width: 44px;">
+                <img src="assets/images/dollar.png" alt="" style="max-width: 44px;">
               </div>
-              <h4>Free Storage</h4>
+              <h4>TERMURAH</h4>
             </div>
           </a>
         </div>
         <div class="col-lg-3 col-md-6">
-          <a href="#">
+          <a>
             <div class="item">
               <div class="image">
-                <img src="assets/images/featured-02.png" alt="" style="max-width: 44px;">
+                <img src="assets/images/terpercaya.png" alt="" style="max-width: 44px;">
               </div>
-              <h4>User More</h4>
+              <h4>Terpercaya</h4>
             </div>
           </a>
         </div>
         <div class="col-lg-3 col-md-6">
-          <a href="#">
+          <a>
             <div class="item">
               <div class="image">
-                <img src="assets/images/featured-03.png" alt="" style="max-width: 44px;">
+                <img src="assets/images/jempolan.png" alt="" style="max-width: 44px;">
               </div>
-              <h4>Reply Ready</h4>
+              <h4>Terbaik</h4>
             </div>
           </a>
         </div>
         <div class="col-lg-3 col-md-6">
-          <a href="#">
+          <a>
             <div class="item">
               <div class="image">
-                <img src="assets/images/featured-04.png" alt="" style="max-width: 44px;">
+                <img src="assets/images/aman.png" alt="" style="max-width: 44px;">
               </div>
-              <h4>Easy Layout</h4>
+              <h4>Teraman</h4>
             </div>
           </a>
         </div>
@@ -402,6 +415,7 @@ https://templatemo.com/tm-589-lugx-gaming
   <script src="assets/js/owl-carousel.js"></script>
   <script src="assets/js/counter.js"></script>
   <script src="assets/js/custom.js"></script>
+  <script src="assets/js/script.js"></script>
 
   </body>
 </html>

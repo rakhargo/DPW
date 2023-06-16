@@ -645,6 +645,50 @@ Header Style
   
 }
 
+.mySlides {
+  display: none;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #383838;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
 /* 
 ---------------------------------------------
 Banner Style
@@ -786,7 +830,7 @@ Services Style
   padding: 35px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
   border-radius: 25px;
-  background-color: #fff;
+  background-color: #383838;
   text-align: center;
 }
 
@@ -802,13 +846,13 @@ Services Style
   display: inline-block;
   text-align: center;
   line-height: 90px;
-  background-color: #0071f8;
+  background-color: #fff;
   border-radius: 50%;
   transition: all .3s;
 }
 
 .features .item:hover .image {
-  background-color: #ee626b;
+  background-color: #6351ff;
 }
 
 
@@ -988,7 +1032,7 @@ Categories Style
 }
 
 .categories .item  {
-  background-color: #0071f8;
+  background-color: #383838;
   /* width: 23%;
   height: 40%; */
   position: relative;
@@ -1124,11 +1168,11 @@ Footer Style
 
 footer {
   margin-top: 150px;
-  background-color: #0071f8;
+  background-color: #383838;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url(../images/footer-bg.jpg);
-  min-height: 150px;
+  background-image: url(../images/footerr.png);
+  min-height: 70px;
   border-radius: 150px 150px 0px 0px;
 }
 
@@ -1159,12 +1203,12 @@ Page Header Style
 */
 
 .page-heading {
-  background-image: url(../images/page-heading-bg.jpg);
-  border-radius: 0px 0px 150px 150px;
+  background-image: url(../images/atasril.png);
+  border-radius: 0px 0px 100px 100px;
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 200px 0px 100px 0px;
+  padding: 100px 0px 100px 0px;
   text-align: center;
 }
 
@@ -1181,7 +1225,7 @@ Page Header Style
 .page-heading h3 {
   font-size: 48px;
   text-transform: uppercase;
-  color: #fff;
+  color: black;
   margin-top: 20px;
   position: relative;
   margin-bottom: 20px;
@@ -1497,74 +1541,25 @@ Single Page Style
 Contact PAge Style
 --------------------------------------------- 
 */
-
-.contact-page .left-text {
-  background-color: #f7f7f7;
-  border-radius: 25px;
-  padding: 60px;
+.contact-page form {
+  position: relative;
+  max-width: 450px;
 }
 
-.contact-page .left-text .section-heading {
-  margin-bottom: 50px;
-}
-
-.contact-page .left-text p {
-  margin-bottom: 50px;
-}
-
-.contact-page .left-text ul li {
-  display: block;
-  font-size: 16px;
-  color: #aaaaaa;
-  font-size: 300;
-  margin-bottom: 30px;
-}
-
-.contact-page .left-text ul li:last-child {
-  margin-bottom: 0px;
-}
-
-.contact-page .left-text ul li span {
-  display: block;
-  font-size: 14px;
-  font-weight: 600;
-  color: #4a4a4a;
-  margin-bottom: 5px;
-}
-
-.contact-page .right-content {
-  margin-left: 50px;
-}
-
-.contact-page .right-content #map {
-  margin-bottom: 60px;
-}
-
-.contact-page .right-content form input {
-  width: 100%;
+.contact-page form input {
+  /* max-width: 450px; */
+  width: 400%;
   height: 50px;
+  outline: none;
   border-radius: 25px;
-  padding: 0px 20px;
-  background-color: #f7f7f7;
-  border: 1px solid #e7e7e7;
+  background-color: #383838;
+  border: none;
+  padding: 0px 25px;
   font-size: 14px;
-  color: #4a4a4a;
-  margin-bottom: 30px;
+  color: #fff;
 }
 
-.contact-page .right-content form textarea {
-  width: 100%;
-  height: 130px;
-  border-radius: 25px;
-  padding: 20px 20px;
-  background-color: #f7f7f7;
-  border: 1px solid #e7e7e7;
-  font-size: 14px;
-  color: #4a4a4a;
-  margin-bottom: 30px;
-}
-
-.contact-page .right-content form button {
+.contact-page form button {
   display: inline-block;
   height: 50px;
   line-height: 50px;
@@ -1576,12 +1571,32 @@ Contact PAge Style
   padding: 0px 25px;
   border: none;
   border-radius: 25px;
+  position: absolute;
+  /* right: 0; */
+  top: 0;
   transition: all .3s;
+  margin-left: 987px;
 }
 
-.contact-page .right-content form button:hover {
+.contact-page form button:hover {
   background-color: #0071f8;
 }
+
+
+.contact-page input[type=text] {
+  /* background-color: white; */
+  background-image: url(../images/search.png);
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding-left: 30px;
+}
+
+.contact-page h5 {
+  margin-left: 15px;
+  margin-bottom: 15px;
+}
+
+
 
 /* 
 ---------------------------------------------

@@ -50,7 +50,7 @@ https://templatemo.com/tm-589-lugx-gaming
             <div class="col-12">
                 <nav class="main-nav">
                     <!-- ***** Logo Start ***** -->
-                    <a href="index.html" class="logo">
+                    <a href="/" class="logo">
                         <img src="assets/images/logo.png" alt="" style="width: 158px;">
                     </a>
                     <!-- ***** Logo End ***** -->
@@ -58,7 +58,7 @@ https://templatemo.com/tm-589-lugx-gaming
                     <ul class="nav">
                       <li><a href="/">Home</a></li>
                       <li><a href="tabVoucher" class="active">Our Shop</a></li>
-                      <li><a href="tabRiwayat">Riwayat pesanan</a></li>
+                      <li><a href="tabRiwayat">Lacak pesanan</a></li>
                       <li><a href="tabAdmin">Admin page</a></li>
                   </ul>   
                     <a class='menu-trigger'>

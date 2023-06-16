@@ -38,3 +38,7 @@ Route::get('/tabRiwayat', function () {
 Route::get('/tabAdmin', function () {
     return view('admin/admin');
 });
+
+Route::get('/images', function () {
+    return assets('admin/admin');
+});
