@@ -25,6 +25,10 @@ Route::get('/tabDetails', function () {
     return view('tabDetails');
 });
 
-Route::get('/tabContact', function () {
-    return view('tabContact');
+Route::get('/tabRiwayat', function () {
+    return view('tabRiwayat');
+});
+
+Route::get('/tabAdmin', function () {
+    return view('admin/admin');
 });

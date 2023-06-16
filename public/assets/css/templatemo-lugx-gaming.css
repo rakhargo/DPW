@@ -285,7 +285,7 @@ Header Style
 */
 
 .background-header {
-  background-color: #0071f8 !important;
+  background-color: #383838 !important;
   border-radius: 0px 0px 25px 25px;
   height: 80px!important;
   position: fixed!important;
@@ -387,27 +387,28 @@ Header Style
 }
 
 .header-area .main-nav .nav li:last-child a {
-  background-color: #ee626b;
+  background-color: black;
   text-transform: uppercase;
   font-weight: 500;
 }
 
 .header-area .main-nav .nav li:last-child:hover a {
-  background-color: #ee626b;
+  background-color: #fff;
+  color: black;
 }
 
 .header-area .main-nav .nav li:hover a {
-  background-color: rgba(255, 255, 255, 0.10);
+  background-color: black;
 }
 
 .header-area .main-nav .nav li a.active {
   color: #fff;
-  background-color: rgba(255, 255, 255, 0.10);
+  background-color: black;
 }
 
 .background-header .main-nav .nav li a.active {
   color: #fff;
-  background-color: rgba(255, 255, 255, 0.10);
+  background-color: black;
 }
 
 .header-area .main-nav .menu-trigger {
@@ -651,7 +652,7 @@ Banner Style
 */
 
 .main-banner {
-  background-image: url(../images/banner-bg.jpg);
+  background-image: url(../images/bannerindex.png);
   border-radius: 0px 0px 150px 150px;
   background-position: center bottom;
   background-repeat: no-repeat;
@@ -678,7 +679,7 @@ Banner Style
 
 .main-banner .caption h2:after {
   position: absolute;
-  background-image: url(../images/caption-dec.png);
+  /* background-image: url(../images/caption-dec.png); */
   width: 202px;
   height: 12px;
   content: '';

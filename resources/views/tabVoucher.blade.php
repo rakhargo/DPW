@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <title>Lugx Gaming - Shop Page</title>
+    <title>Lugx Gaming - Shop Page</title> 
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -31,7 +31,7 @@ https://templatemo.com/tm-589-lugx-gaming
 <body>
 
   <!-- ***** Preloader Start ***** -->
-  <div id="js-preloader" class="js-preloader">
+  {{-- <div id="js-preloader" class="js-preloader">
     <div class="preloader-inner">
       <span class="dot"></span>
       <div class="dots">
@@ -40,7 +40,7 @@ https://templatemo.com/tm-589-lugx-gaming
         <span></span>
       </div>
     </div>
-  </div>
+  </div> --}}
   <!-- ***** Preloader End ***** -->
 
   <!-- ***** Header Area Start ***** -->
@@ -59,7 +59,7 @@ https://templatemo.com/tm-589-lugx-gaming
                       <li><a href="/">Home</a></li>
                       <li><a href="tabVoucher" class="active">Our Shop</a></li>
                       <li><a href="tabDetails">Product Details</a></li>
-                      <li><a href="tabContact">Contact Us</a></li>
+                      <li><a href="tabContact">Riwayat pesanan</a></li>
                       <li><a href="#">Sign In</a></li>
                   </ul>   
                     <a class='menu-trigger'>

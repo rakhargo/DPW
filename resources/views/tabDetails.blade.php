@@ -30,7 +30,7 @@ https://templatemo.com/tm-589-lugx-gaming
 <body>
 
   <!-- ***** Preloader Start ***** -->
-  <div id="js-preloader" class="js-preloader">
+  {{-- <div id="js-preloader" class="js-preloader">
     <div class="preloader-inner">
       <span class="dot"></span>
       <div class="dots">
@@ -39,7 +39,7 @@ https://templatemo.com/tm-589-lugx-gaming
         <span></span>
       </div>
     </div>
-  </div>
+  </div> --}}
   <!-- ***** Preloader End ***** -->
 
   <!-- ***** Header Area Start ***** -->
@@ -58,8 +58,8 @@ https://templatemo.com/tm-589-lugx-gaming
                       <li><a href="/">Home</a></li>
                       <li><a href="tabVoucher">Our Shop</a></li>
                       <li><a href="tabDetails" class="active">Product Details</a></li>
-                      <li><a href="tabContact">Contact Us</a></li>
-                      <li><a href="#">Sign In</a></li>
+                      <li><a href="tabRiwayat">Riwayat pesanan</a></li>
+                      <li><a href="tabAdmin">Admin page</a></li>
                   </ul>   
                     <a class='menu-trigger'>
                         <span>Menu</span>

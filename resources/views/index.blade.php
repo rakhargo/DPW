@@ -30,7 +30,7 @@ https://templatemo.com/tm-589-lugx-gaming
 <body>
 
   <!-- ***** Preloader Start ***** -->
-  <div id="js-preloader" class="js-preloader">
+  {{-- <div id="js-preloader" class="js-preloader">
     <div class="preloader-inner">
       <span class="dot"></span>
       <div class="dots">
@@ -39,7 +39,7 @@ https://templatemo.com/tm-589-lugx-gaming
         <span></span>
       </div>
     </div>
-  </div>
+  </div> --}}
   <!-- ***** Preloader End ***** -->
 
   <!-- ***** Header Area Start ***** -->
@@ -52,14 +52,14 @@ https://templatemo.com/tm-589-lugx-gaming
                     <a href="index.html" class="logo">
                         <img src="assets/images/logo.png" alt="" style="width: 158px;">
                     </a>
-                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Logo End ***** --> 
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
                       <li><a href="/" class="active">Home</a></li>
                       <li><a href="tabVoucher">Our Shop</a></li>
                       <li><a href="tabDetails">Product Details</a></li>
-                      <li><a href="tabContact">Contact Us</a></li>
-                      <li><a href="#">Sign In</a></li>
+                      <li><a href="tabRiwayat">Riwayat pesanan</a></li>
+                      <li><a href="tabAdmin">Admin page</a></li>
                   </ul>   
                     <a class='menu-trigger'>
                         <span>Menu</span>
@@ -80,12 +80,12 @@ https://templatemo.com/tm-589-lugx-gaming
             <h6>Welcome to lugx</h6>
             <h2>BEST GAMING SITE EVER!</h2>
             <p>LUGX Gaming is free Bootstrap 5 HTML CSS website template for your gaming websites. You can download and use this layout for commercial purposes. Please tell your friends about TemplateMo.</p>
-            <div class="search-input">
+            {{-- <div class="search-input">
               <form id="search" action="#">
                 <input type="text" placeholder="Type Something" id='searchText' name="searchKeyword" onkeypress="handle" />
                 <button role="button">Search Now</button>
               </form>
-            </div>
+            </div> --}}
           </div>
         </div>
         <div class="col-lg-4 offset-lg-2">
@@ -146,7 +146,61 @@ https://templatemo.com/tm-589-lugx-gaming
     </div>
   </div>
 
-  <div class="section trending">
+  <div class="section categories">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <div class="section-heading">
+            <h6>Categories</h6>
+            <h2>Top Categories</h2>
+          </div>
+        </div>
+        <div class="col-lg col-sm-6 col-xs-12">
+          <div class="item">
+            <h4>Action</h4>
+            <div class="thumb">
+              <a href="product-details.html"><img src="assets/images/categories-01.jpg" alt=""></a>
+            </div>
+          </div>
+        </div>
+        {{-- <div class="col-lg col-sm-6 col-xs-12">
+          <div class="item">
+            <h4>Action</h4>
+            <div class="thumb">
+              <a href="product-details.html"><img src="assets/images/categories-05.jpg" alt=""></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg col-sm-6 col-xs-12">
+          <div class="item">
+            <h4>Action</h4>
+            <div class="thumb">
+              <a href="product-details.html"><img src="assets/images/categories-03.jpg" alt=""></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg col-sm-6 col-xs-12">
+          <div class="item">
+            <h4>Action</h4>
+            <div class="thumb">
+              <a href="product-details.html"><img src="assets/images/categories-04.jpg" alt=""></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg col-sm-6 col-xs-12">
+          <div class="item">
+            <h4>Action</h4>
+            <div class="thumb">
+              <a href="product-details.html"><img src="assets/images/categories-05.jpg" alt=""></a>
+            </div>
+          </div>
+        </div> --}}
+      </div>
+    </div>
+  </div>
+  
+
+  {{-- <div class="section trending">
     <div class="container">
       <div class="row">
         <div class="col-lg-6">
@@ -214,9 +268,9 @@ https://templatemo.com/tm-589-lugx-gaming
         </div>
       </div>
     </div>
-  </div>
+  </div> --}}
 
-  <div class="section most-played">
+  {{-- <div class="section most-played">
     <div class="container">
       <div class="row">
         <div class="col-lg-6">
@@ -304,62 +358,9 @@ https://templatemo.com/tm-589-lugx-gaming
         </div>
       </div>
     </div>
-  </div>
+  </div> --}}
 
-  <div class="section categories">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <div class="section-heading">
-            <h6>Categories</h6>
-            <h2>Top Categories</h2>
-          </div>
-        </div>
-        <div class="col-lg col-sm-6 col-xs-12">
-          <div class="item">
-            <h4>Action</h4>
-            <div class="thumb">
-              <a href="product-details.html"><img src="assets/images/categories-01.jpg" alt=""></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg col-sm-6 col-xs-12">
-          <div class="item">
-            <h4>Action</h4>
-            <div class="thumb">
-              <a href="product-details.html"><img src="assets/images/categories-05.jpg" alt=""></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg col-sm-6 col-xs-12">
-          <div class="item">
-            <h4>Action</h4>
-            <div class="thumb">
-              <a href="product-details.html"><img src="assets/images/categories-03.jpg" alt=""></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg col-sm-6 col-xs-12">
-          <div class="item">
-            <h4>Action</h4>
-            <div class="thumb">
-              <a href="product-details.html"><img src="assets/images/categories-04.jpg" alt=""></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg col-sm-6 col-xs-12">
-          <div class="item">
-            <h4>Action</h4>
-            <div class="thumb">
-              <a href="product-details.html"><img src="assets/images/categories-05.jpg" alt=""></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="section cta">
+  {{-- <div class="section cta">
     <div class="container">
       <div class="row">
         <div class="col-lg-5">
@@ -398,7 +399,7 @@ https://templatemo.com/tm-589-lugx-gaming
         </div>
       </div>
     </div>
-  </div>
+  </div> --}}
 
   <footer>
     <div class="container">
