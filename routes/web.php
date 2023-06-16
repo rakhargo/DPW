@@ -22,7 +22,9 @@ Route::get('/tabVoucher', function () {
 });
 
 Route::get('/tabDetails', function () {
-    return view('tabDetails');
+    $id = $_GET['id'];
+    // print_r($_GET);
+    return view('tabDetails', ['id' => $id]); 
 });
 
 Route::get('/tabRiwayat', function () {

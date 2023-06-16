@@ -57,7 +57,6 @@ https://templatemo.com/tm-589-lugx-gaming
                     <ul class="nav">
                       <li><a href="/" class="active">Home</a></li>
                       <li><a href="tabVoucher">Our Shop</a></li>
-                      <li><a href="tabDetails">Product Details</a></li>
                       <li><a href="tabRiwayat">Riwayat pesanan</a></li>
                       <li><a href="tabAdmin">Admin page</a></li>
                   </ul>   
@@ -155,54 +154,27 @@ https://templatemo.com/tm-589-lugx-gaming
             <h2>Kategori</h2>
           </div>
         </div>
+        <?php
+        $collection = [1, 2, 3];
+        ?>
+        @foreach ($collection as $id)
         <div class="col-lg col-sm-6 col-xs-12">
           <div class="item">
-            {{-- <h4>Nama voucher</h4> --}}
+            <h4>{{$id}}</h4>
             <div class="thumb">
-              <a href="tabDetails"><img src="assets/images/categories-01.jpg" alt=""></a>
+              <a href="tabDetails?id={{$id}}"><img src="assets/images/categories-01.jpg" alt=""></a>
             </div>
           </div>
         </div>
-        <div class="col-lg col-sm-6 col-xs-12">
+        @endforeach
+        {{-- <div class="col-lg col-sm-6 col-xs-12">
           <div class="item">
-            {{-- <h4>Nama voucher</h4> --}}
+            <h4>Nama voucher</h4>
             <div class="thumb">
               <a href="product-details.html"><img src="assets/images/categories-01.jpg" alt=""></a>
             </div>
           </div>
-        </div>
-        <div class="col-lg col-sm-6 col-xs-12">
-          <div class="item">
-            {{-- <h4>Nama voucher</h4> --}}
-            <div class="thumb">
-              <a href="product-details.html"><img src="assets/images/categories-05.jpg" alt=""></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg col-sm-6 col-xs-12">
-          <div class="item">
-            {{-- <h4>Nama voucher</h4> --}}
-            <div class="thumb">
-              <a href="product-details.html"><img src="assets/images/categories-03.jpg" alt=""></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg col-sm-6 col-xs-12">
-          <div class="item">
-            {{-- <h4>Nama voucher</h4> --}}
-            <div class="thumb">
-              <a href="product-details.html"><img src="assets/images/categories-04.jpg" alt=""></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg col-sm-6 col-xs-12">
-          <div class="item">
-            {{-- <h4>Nama voucher</h4> --}}
-            <div class="thumb">
-              <a href="product-details.html"><img src="assets/images/categories-05.jpg" alt=""></a>
-            </div>
-          </div>
-        </div>
+        </div> --}}
       </div>
     </div>
   </div>
