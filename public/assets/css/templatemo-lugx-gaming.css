@@ -989,6 +989,8 @@ Categories Style
 
 .categories .item  {
   background-color: #0071f8;
+  /* width: 23%;
+  height: 40%; */
   position: relative;
   border-radius: 25px;
   text-align: center;
@@ -999,6 +1001,14 @@ Categories Style
   position: relative;
   border-radius: 25px;
   overflow: hidden;
+  transition: 0.3s;
+}
+
+.categories .item .thumb:hover {
+  /* position: relative;
+  border-radius: 25px;
+  overflow: hidden; */
+  filter: blur(3px);
 }
 
 .categories .item h4 {

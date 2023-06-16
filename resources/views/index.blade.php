@@ -151,21 +151,29 @@ https://templatemo.com/tm-589-lugx-gaming
       <div class="row">
         <div class="col-lg-12 text-center">
           <div class="section-heading">
-            <h6>Categories</h6>
-            <h2>Top Categories</h2>
+            {{-- <h6>Kategori</h6> --}}
+            <h2>Kategori</h2>
           </div>
         </div>
         <div class="col-lg col-sm-6 col-xs-12">
           <div class="item">
-            <h4>Action</h4>
+            {{-- <h4>Nama voucher</h4> --}}
+            <div class="thumb">
+              <a href="tabDetails"><img src="assets/images/categories-01.jpg" alt=""></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg col-sm-6 col-xs-12">
+          <div class="item">
+            {{-- <h4>Nama voucher</h4> --}}
             <div class="thumb">
               <a href="product-details.html"><img src="assets/images/categories-01.jpg" alt=""></a>
             </div>
           </div>
         </div>
-        {{-- <div class="col-lg col-sm-6 col-xs-12">
+        <div class="col-lg col-sm-6 col-xs-12">
           <div class="item">
-            <h4>Action</h4>
+            {{-- <h4>Nama voucher</h4> --}}
             <div class="thumb">
               <a href="product-details.html"><img src="assets/images/categories-05.jpg" alt=""></a>
             </div>
@@ -173,7 +181,7 @@ https://templatemo.com/tm-589-lugx-gaming
         </div>
         <div class="col-lg col-sm-6 col-xs-12">
           <div class="item">
-            <h4>Action</h4>
+            {{-- <h4>Nama voucher</h4> --}}
             <div class="thumb">
               <a href="product-details.html"><img src="assets/images/categories-03.jpg" alt=""></a>
             </div>
@@ -181,7 +189,7 @@ https://templatemo.com/tm-589-lugx-gaming
         </div>
         <div class="col-lg col-sm-6 col-xs-12">
           <div class="item">
-            <h4>Action</h4>
+            {{-- <h4>Nama voucher</h4> --}}
             <div class="thumb">
               <a href="product-details.html"><img src="assets/images/categories-04.jpg" alt=""></a>
             </div>
@@ -189,12 +197,12 @@ https://templatemo.com/tm-589-lugx-gaming
         </div>
         <div class="col-lg col-sm-6 col-xs-12">
           <div class="item">
-            <h4>Action</h4>
+            {{-- <h4>Nama voucher</h4> --}}
             <div class="thumb">
               <a href="product-details.html"><img src="assets/images/categories-05.jpg" alt=""></a>
             </div>
           </div>
-        </div> --}}
+        </div>
       </div>
     </div>
   </div>
