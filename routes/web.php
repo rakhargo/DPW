@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\C_Kategori;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +16,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Route::get('/my-page', [C_Kategori::class, 'getKategori']);
+
 Route::get('/', function () {
     return view('index');
 });
@@ -23,7 +28,6 @@ Route::get('/tabVoucher', function () {
 
 Route::get('/tabDetails', function () {
     $id = $_GET['id'];
-    // print_r($_GET);
     return view('tabDetails', ['id' => $id]); 
 });
 

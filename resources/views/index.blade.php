@@ -1,3 +1,7 @@
+<?php
+  use Illuminate\Support\Facades\DB;
+  use App\Http\Controllers\C_Kategori;
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -156,6 +160,7 @@ https://templatemo.com/tm-589-lugx-gaming
         </div>
         <?php
         $collection = [1, 2, 3];
+        // $kontol = getAllKategori();
         ?>
         @foreach ($collection as $id)
         <div class="col-lg col-sm-6 col-xs-12">
