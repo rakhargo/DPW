@@ -97,7 +97,7 @@ https://templatemo.com/tm-589-lugx-gaming
             <img src="assets/images/steam.png" style="width:100%">
           </div>
           <div class="mySlides fade">
-            <img src="assets/images/google.jpg" style="width:100%">
+            <img src="assets/images/googlle.png" style="width:100%">
           </div>
           <div class="mySlides fade">
             <img src="assets/images/rilps.png" style="width:100%">
@@ -172,18 +172,32 @@ https://templatemo.com/tm-589-lugx-gaming
           </div>
         </div>
         <?php
-        $collection = [1, 2, 3];
-        // $kontol = getAllKategori();
+        $no = 1;
         ?>
-        @foreach ($collection as $id)
-        <div class="col-lg col-sm-6 col-xs-12">
+        @foreach ($datas as $kateg)
+        <div class="col-2">
           <div class="item">
-            <h4>{{$id}}</h4>
             <div class="thumb">
-              <a href="tabDetails?id={{$id}}"><img src="assets/images/categories-01.jpg" alt=""></a>
+              <a href="tabDetails?id={{ $kateg->id_kategori }}">
+                <img src="assets/imagesdb/{{ $kateg->gambar_kategori }}" alt="">
+              </a>
             </div>
+            <h4>{{ $kateg->nama_kategori }}</h4>
           </div>
         </div>
+        {{-- <div class="col-lg col-sm-6 col-xs-12">
+          <div class="item">
+            <h4>title</h4>
+            <div class="thumb">
+              <a href="">
+                <img src="assets/imagesdb/steam.png" alt="">
+              </a>
+            </div>
+          </div>
+        </div> --}}
+        <?php
+        $no++;
+        ?>
         @endforeach
         {{-- <div class="col-lg col-sm-6 col-xs-12">
           <div class="item">

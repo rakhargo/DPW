@@ -2,12 +2,13 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
+
 use App\Http\Controllers\C_Kategori;
 
 
 /*
 |--------------------------------------------------------------------------
-| Web Routes
+| Web Routes 
 |--------------------------------------------------------------------------
 |
 | Here is where you can register web routes for your application. These
@@ -16,11 +17,15 @@ use App\Http\Controllers\C_Kategori;
 |
 */
 
-// Route::get('/my-page', [C_Kategori::class, 'getKategori']);
+Route::get('/', [C_Kategori::class, 'index']);
 
-Route::get('/', function () {
-    return view('index');
-});
+// Route::get('/', function () {
+//     // Route::resource('kategori', C_Kategori::class);
+//     // $datas = ;
+
+//     // return view('index', compact('datas'));
+//     return $datas;
+// });
 
 Route::get('/tabVoucher', function () {
     return view('tabVoucher');
@@ -42,3 +47,5 @@ Route::get('/tabAdmin', function () {
 Route::get('/images', function () {
     return assets('admin/admin');
 });
+
+Route::resource('/kategori', C_Kategori::class);

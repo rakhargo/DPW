@@ -1033,8 +1033,8 @@ Categories Style
 
 .categories .item  {
   background-color: #383838;
-  /* width: 23%;
-  height: 40%; */
+  width: 105%;
+  height: 85%;
   position: relative;
   border-radius: 25px;
   text-align: center;
@@ -1042,6 +1042,7 @@ Categories Style
 }
 
 .categories .item .thumb {
+  padding: 15px;
   position: relative;
   border-radius: 25px;
   overflow: hidden;
