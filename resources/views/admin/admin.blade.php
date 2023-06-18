@@ -84,7 +84,7 @@ https://templatemo.com/tm-589-lugx-gaming
   </div>
     <div class="section trending">
         <div class="container">
-            <h1>Table Pesanan</h1>
+            <h1>Table Pesanan</h1> <a>Create</a>
             <table class="table">
                 <thead>
                     <tr>
@@ -113,7 +113,7 @@ https://templatemo.com/tm-589-lugx-gaming
     </div>
     <div class="section trending">
         <div class="container">
-            <h1>Table Kategori</h1>
+            <h1>Table Kategori</h1> <a href="{{url('kategori/create')}}">Create</a>
             <table class="table">
                 <thead>
                     <tr>
