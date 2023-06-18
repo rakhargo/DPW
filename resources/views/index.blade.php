@@ -178,23 +178,13 @@ https://templatemo.com/tm-589-lugx-gaming
         <div class="col-2">
           <div class="item">
             <div class="thumb">
-              <a href="tabDetails?id={{ $kateg->id_kategori }}">
+              <a href="{{ url('tabDetails/'.$kateg->id_kategori.'') }}">
                 <img src="assets/imagesdb/{{ $kateg->gambar_kategori }}" alt="">
               </a>
             </div>
             <h4>{{ $kateg->nama_kategori }}</h4>
           </div>
         </div>
-        {{-- <div class="col-lg col-sm-6 col-xs-12">
-          <div class="item">
-            <h4>title</h4>
-            <div class="thumb">
-              <a href="">
-                <img src="assets/imagesdb/steam.png" alt="">
-              </a>
-            </div>
-          </div>
-        </div> --}}
         <?php
         $no++;
         ?>

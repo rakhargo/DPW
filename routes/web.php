@@ -19,6 +19,8 @@ use App\Http\Controllers\C_Kategori;
 
 Route::get('/', [C_Kategori::class, 'index']);
 
+Route::get('/tabDetails/{id}', [C_Kategori::class, 'getId']);
+
 // Route::get('/', function () {
 //     // Route::resource('kategori', C_Kategori::class);
 //     // $datas = ;
@@ -27,14 +29,17 @@ Route::get('/', [C_Kategori::class, 'index']);
 //     return $datas;
 // });
 
+Route::resource('/kategori', C_Kategori::class);
+
+
 Route::get('/tabVoucher', function () {
     return view('tabVoucher');
 });
 
-Route::get('/tabDetails', function () {
-    $id = $_GET['id'];
-    return view('tabDetails', ['id' => $id]); 
-});
+// Route::get('/tabDetails/{id}', function () {
+//     $id = $_GET['id'];
+//     return view('tabDetails', ['id' => $id]); 
+// });
 
 Route::get('/tabRiwayat', function () {
     return view('tabRiwayat');
@@ -47,5 +52,3 @@ Route::get('/tabAdmin', function () {
 Route::get('/images', function () {
     return assets('admin/admin');
 });
-
-Route::resource('/kategori', C_Kategori::class);
