@@ -1031,7 +1031,7 @@ Categories Style
   margin-top: 30px;
 }
 
-.categories .item  {
+ .item  {
   background-color: #383838;
   width: 105%;
   height: 85%;
@@ -1041,7 +1041,7 @@ Categories Style
   margin-bottom: 30px;
 }
 
-.categories .item .thumb {
+ .item .thumb {
   padding: 15px;
   position: relative;
   border-radius: 25px;
@@ -1049,14 +1049,14 @@ Categories Style
   transition: 0.3s;
 }
 
-.categories .item .thumb:hover {
+ .item .thumb:hover {
   /* position: relative;
   border-radius: 25px;
   overflow: hidden; */
   filter: blur(3px);
 }
 
-.categories .item h4 {
+ .item h4 {
   font-size: 17px;
   font-weight: 600;
   color: #fff;
@@ -1400,6 +1400,9 @@ Single Page Style
 
 .single-product .left-image {
   margin-right: 80px;
+  padding: 10px;
+  background-color: #1e1e1e;
+  border-radius: 25px;
 }
 
 .single-product .left-image img {
@@ -1429,6 +1432,10 @@ Single Page Style
 .single-product p {
   margin-top: 50px;
   margin-bottom: 60px;
+}
+
+.single-product h5, h6 {
+  color: #fff;
 }
 
 .single-product form input {

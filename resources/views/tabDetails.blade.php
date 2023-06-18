@@ -90,8 +90,9 @@ https://templatemo.com/tm-589-lugx-gaming
             <img src="/assets/imagesdb/{{$data_condition->gambar_kategori}}" alt="">
           </div>
         </div>
+
         <div class="col-lg-6" >
-          <h4>{{$data_condition->nama_kategori}}</h4>
+          <h4>1. Pilih nominal Voucher</h4>
           <div class="row">
             @foreach ($data_join as $data)
             <div class="col-3" >
@@ -105,6 +106,23 @@ https://templatemo.com/tm-589-lugx-gaming
               </div>
             </div>
             @endforeach
+          </div>
+
+        <div class="col-lg-6" >
+          <h4>2. Pilih Metode pembayaran</h4>
+          <div class="row">
+            {{-- @foreach ($data_join as $data) --}}
+            <div class="col-3" >
+              <div class="item">
+                <div class="thumb">
+                  <a href="">
+                    {{-- <img src="/assets/imagesdb/{{ $data->gambar_kategori }}" alt=""> --}}
+                  </a>
+                </div>
+                {{-- <h6>{{ $data->nominal_voucher }}</h6> --}}
+              </div>
+            </div>
+            {{-- @endforeach --}}
           </div>
           {{-- <span class="price"><em>$28</em> $22</span> --}}
           {{-- <p>LUGX Gaming Template is based on the latest Bootstrap 5 CSS framework. This template is provided by TemplateMo and it is suitable for your gaming shop ecommerce websites. Feel free to use this for any purpose. Thank you.</p>

@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
 
-use App\Http\Controllers\C_Kategori;
+use App\Http\Controllers\C_Utama;
 
 
 /*
@@ -17,19 +17,19 @@ use App\Http\Controllers\C_Kategori;
 |
 */
 
-Route::get('/', [C_Kategori::class, 'index']);
+Route::get('/', [C_Utama::class, 'index']);
 
-Route::get('/tabDetails/{id}', [C_Kategori::class, 'getId']);
+Route::get('/tabDetails/{id}', [C_Utama::class, 'getId']);
 
 // Route::get('/', function () {
-//     // Route::resource('kategori', C_Kategori::class);
+//     // Route::resource('kategori', C_Utama::class);
 //     // $datas = ;
 
 //     // return view('index', compact('datas'));
 //     return $datas;
 // });
 
-Route::resource('/kategori', C_Kategori::class);
+Route::resource('/kategori', C_Utama::class);
 
 
 Route::get('/tabVoucher', function () {

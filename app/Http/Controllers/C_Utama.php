@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\M_Kategori;
 use App\Models\M_Voucher;
  
-class C_Kategori extends Controller
+class C_Utama extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,7 @@ class C_Kategori extends Controller
     public function index()     
     {
         $datas = M_Kategori::all();
-        // $data_condition = M_Kategori::where("id_kategori", "=", "1")->get(); // ini syntax buat misal manggil where
-        // return $datas; // return nya data_condition kalo mau spesifik
+
         return view('index', compact('datas')); // buat return ke index dengan passing parameter
     }
 
