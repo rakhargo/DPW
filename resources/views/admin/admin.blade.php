@@ -157,7 +157,7 @@ https://templatemo.com/tm-589-lugx-gaming
     </div>
     <div class="section trending">
         <div class="container">
-            <h1>Table Metode</h1>
+            <h1>Table Metode</h1> <a href="{{url('metode/create')}}">Create</a>
             <table class="table">
                 <thead>
                     <tr>

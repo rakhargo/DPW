@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
 
 use App\Http\Controllers\C_Utama;
+use App\Http\Controllers\C_Metode;
 
 
 /*
@@ -30,6 +31,7 @@ Route::get('/tabDetails/{id}', [C_Utama::class, 'getId']);
 // });
 
 Route::resource('/kategori', C_Utama::class);
+Route::resource('/metode', C_Metode::class);
 
 
 Route::get('/tabVoucher', function () {
@@ -55,4 +57,7 @@ Route::get('/images', function () {
 
 Route::get('/kategoriCreate', function () {
     return view('admin/kategoriCreate');
+});
+Route::get('/metodeCreate', function () {
+    return view('admin/Create');
 });
