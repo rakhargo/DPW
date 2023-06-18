@@ -52,3 +52,7 @@ Route::get('/tabAdmin', function () {
 Route::get('/images', function () {
     return assets('admin/admin');
 });
+
+Route::get('/kategoriCreate', function () {
+    return view('admin/kategoriCreate');
+});

@@ -37,13 +37,7 @@ class C_Utama extends Controller
     public function create()
     {
         $model = new M_Kategori;
-        $model->nama_kategori = "ytta";
-        if ($model->save()) {
-            return "Data ". $model ." Berhasil disimpan";
-        }
-        else {
-            return "Data ". $model ." Gagal disimpan";
-        }
+        return view('admin/kategoriCreate', compact('model'));
         // coba jalanin ke port/kategori/create  gabisa, soalnya gada column updated sama create, harus ditambah
     }
 
@@ -52,9 +46,14 @@ class C_Utama extends Controller
      */
     public function store(Request $request)
     {
-        //
-    }
+        $model = new M_Kategori;
+        $model->nama_kategori = $request->nama_kategori;
+        $model->gambar_kategori = $request->gambar_kategori;
 
+        $model->save();
+        return redirect('/tabAdmin');
+    }
+ 
     /**
      * Display the specified resource.
      */
