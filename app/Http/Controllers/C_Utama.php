@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\M_Kategori;
-use App\Models\M_Voucher;
+use App\Models\M_Metode;
  
 class C_Utama extends Controller
 {
@@ -16,6 +16,12 @@ class C_Utama extends Controller
         $datas = M_Kategori::all();
 
         return view('index', compact('datas')); // buat return ke index dengan passing parameter
+    }
+    public function admin()
+    {
+        $listKategori = M_Kategori::all();
+        $listMetode = M_Metode::all();
+        return view('admin/admin', compact('listKategori','listMetode')); // buat return ke index dengan passing parameter
     }
 
     public function getId($id)

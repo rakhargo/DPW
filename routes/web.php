@@ -19,6 +19,7 @@ use App\Http\Controllers\C_Metode;
 */
 
 Route::get('/', [C_Utama::class, 'index']);
+Route::get('/tabAdmin', [C_Utama::class, 'admin']);
 
 Route::get('/tabDetails/{id}', [C_Utama::class, 'getId']);
 
@@ -47,9 +48,9 @@ Route::get('/tabRiwayat', function () {
     return view('tabRiwayat');
 });
 
-Route::get('/tabAdmin', function () {
-    return view('admin/admin');
-});
+// Route::get('/tabAdmin', function () {
+//     return view('admin/admin');
+// });
 
 Route::get('/images', function () {
     return assets('admin/admin');

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -122,17 +123,21 @@ https://templatemo.com/tm-589-lugx-gaming
                         <th>Logo</th>
                     </tr>
                 </thead>
+                <?php $no = 1; ?>
                 <tbody>
+                    @foreach ($listKategori as $kategori)
                     <tr>
                         <td>1</td>
-                        <td>Kategori Gemink</td>
-                        <td>Logo Gemink</td>
+                        <td>{{ $kategori->nama_kategori }}</td>
+                        <td><img src="assets/imagesdb{{ $kategori->gambar_kategori }}" alt""></td>
                     </tr>
+                    <?php $no++; ?>
+                    @endforeach
                 </tbody>
             </table>
         </div>
     </div>
-    <div class="section trending">
+    {{-- <div class="section trending">
         <div class="container">
             <h1>Table Voucher</h1>
             <table class="table">
@@ -154,7 +159,7 @@ https://templatemo.com/tm-589-lugx-gaming
                 </tbody>
             </table>
         </div>
-    </div>
+    </div> --}}
     <div class="section trending">
         <div class="container">
             <h1>Table Metode</h1> <a href="{{url('metode/create')}}">Create</a>
@@ -167,11 +172,15 @@ https://templatemo.com/tm-589-lugx-gaming
                     </tr>
                 </thead>
                 <tbody>
+                    <?php $noM = 1; ?>
+                    @foreach ($listMetode as $metode)
                     <tr>
                         <td>1</td>
-                        <td>Cash</td>
-                        <td>2500</td>
+                        <td>{{ $metode->nama_metode }}</td>
+                        <td>{{ $metode->biaya_administrasi }}</td>
                     </tr>
+                    <?php $noM++; ?>
+                    @endforeach
                 </tbody>
             </table>
         </div>
