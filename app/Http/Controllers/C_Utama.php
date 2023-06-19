@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\M_Kategori;
 use App\Models\M_Voucher;
+use App\Models\M_Metode;
  
 class C_Utama extends Controller
 {
@@ -22,11 +23,16 @@ class C_Utama extends Controller
     {
         $data_join = M_Kategori::join('t_voucher', 't_kategori.id_kategori', '=', 't_voucher.id_kategori')
         ->where('t_voucher.id_kategori', '=', $id)
-        ->select('t_kategori.nama_kategori', 't_kategori.gambar_kategori', 't_voucher.id_kategori', 't_voucher.nominal_voucher', 't_voucher.harga_voucher')
+        ->select('t_kategori.id_kategori', 't_voucher.id_voucher', 't_kategori.nama_kategori', 't_kategori.gambar_kategori', 't_voucher.id_kategori', 't_voucher.nominal_voucher', 't_voucher.harga_voucher')
         ->get();
         $data_condition = M_Kategori::where('id_kategori', $id)->first(); // ini syntax buat misal manggil where
-
-        return view('tabDetails', compact('data_condition'), compact('data_join')); // buat return ke index dengan passing parameter
+        $data_metode = M_Metode::all();
+        $datas = [
+            'join' => $data_join,
+            'condition' => $data_condition,
+            'metode' => $data_metode
+        ];
+        return view('tabDetails', compact('datas')); // buat return ke index dengan passing parameter
     }
 
     // public function

@@ -82,66 +82,99 @@ https://templatemo.com/tm-589-lugx-gaming
     </div>
   </div>
 
-  <div class="single-product section">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6">
-          <div class="left-image">
-            <img src="/assets/imagesdb/{{$data_condition->gambar_kategori}}" alt="">
-          </div>
-        </div>
-
-        <div class="col-lg-6" >
-          <h4>1. Pilih nominal Voucher</h4>
-          <div class="row">
-            @foreach ($data_join as $data)
-            <div class="col-3" >
-              <div class="item">
-                <div class="thumb">
-                  <a href="">
-                    <img src="/assets/imagesdb/{{ $data->gambar_kategori }}" alt="">
-                  </a>
-                </div>
-                <h6>{{ $data->nominal_voucher }}</h6>
+  <form action="{{ url('pesanan') }}" method="post">
+    @csrf
+    <div class="single-product section">
+      <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+              <div class="left-image">
+                <img src="/assets/imagesdb/{{ $datas['condition']->gambar_kategori }}" alt="">
               </div>
             </div>
-            @endforeach
-          </div>
 
-        <div class="col-lg-6" >
-          <h4>2. Pilih Metode pembayaran</h4>
-          <div class="row">
-            {{-- @foreach ($data_join as $data) --}}
-            <div class="col-3" >
-              <div class="item">
-                <div class="thumb">
-                  <a href="">
-                    {{-- <img src="/assets/imagesdb/{{ $data->gambar_kategori }}" alt=""> --}}
-                  </a>
+            <input type="hidden" name="id_kategori" value="{{ $datas['condition']->id_kategori }}">
+
+            <div class="col-lg-6" >
+              <h4>1. Pilih nominal Voucher</h4>
+              <div class="row">
+                @foreach ($datas['join'] as $datajoin)
+                <div class="col-3" >
+                  <div class="item">
+                    <div class="thumb">
+                      <input type="radio"  name="id_voucher" value="{{ $datajoin->id_voucher }}">
+                      {{-- <a href=""> --}}
+                        <img src="/assets/imagesdb/{{ $datajoin->gambar_kategori }}" alt="">
+                        {{-- </a> --}}
+                      </div>
+                    <h6>{{ $datajoin->nominal_voucher }}</h6>
+                     
+                  </div>
                 </div>
-                {{-- <h6>{{ $data->nominal_voucher }}</h6> --}}
+                @endforeach
               </div>
+            
+            <div class="col-lg-6" >
+              <h4>2. Pilih Metode pembayaran</h4>
+                <div class="row">
+                  @foreach ($datas['metode'] as $datametode)
+                  <div class="col-3" >
+                    <div class="item">
+                      <div class="thumb">
+                        <input type="radio" name="id_metode" value="{{ $datametode->id_metode }}">
+                        {{-- <a href=""> --}}
+                          <img src="/assets/imagesdb/{{ $datametode->gambar_metode }}" alt="">
+                        {{-- </a> --}}
+                      </div>
+                      <h6>{{ $datametode->nama_metode }}</h6>
+                    </div>
+                  </div>
+                  @endforeach
+                </div>
+
+            <div class="col-lg-6" >
+              <h4>3. Masukkan Email</h4>
+                <div class="row">
+                  <div class="col-3" >
+                    {{-- <div class="item"> --}}
+                      {{-- <div class="thumb"> --}}
+                        <input type="email" name="email">
+                        {{-- <a href=""> --}}
+                          {{-- <img src="/assets/imagesdb/{{ $datametode->gambar_metode }}" alt=""> --}}
+                        {{-- </a> --}}
+                      {{-- </div> --}}
+                    {{-- </div> --}}
+                  </div>
+                </div>
+                <br><br>
+                
+                <button type="submit"><i class="fa fa-shopping-bag"></i> ADD TO CART</button>
+                {{-- <span class="price"><em>$28</em> $22</span>
+                <p>LUGX Gaming Template is based on the latest Bootstrap 5 CSS framework. This template is provided by TemplateMo and it is suitable for your gaming shop ecommerce websites. Feel free to use this for any purpose. Thank you.</p> --}}
+                {{-- <form id="qty" action="#"> --}}
+                  {{-- <div class="col-lg-6" > --}}
+                    {{-- <h4>3. </h4> --}}
+                      {{-- <div class="row"> --}}
+                      {{-- </div> --}}
+                  {{-- </div> --}}
+                    {{-- <input type="qty" class="form-control" id="1" aria-describedby="quantity" placeholder="1"> --}}
+              {{-- </form> --}}
+              {{-- <ul>
+                <li><span>Game ID:</span> COD MMII</li>
+                <li><span>Genre:</span> <a href="#">Action</a>, <a href="#">Team</a>, <a href="#">Single</a></li>
+                <li><span>Multi-tags:</span> <a href="#">War</a>, <a href="#">Battle</a>, <a href="#">Royal</a></li>
+              </ul> --}}
             </div>
-            {{-- @endforeach --}}
+
+            
+
+            <div class="col-lg-12">
+              <div class="sep"></div>
+            </div>
           </div>
-          {{-- <span class="price"><em>$28</em> $22</span> --}}
-          {{-- <p>LUGX Gaming Template is based on the latest Bootstrap 5 CSS framework. This template is provided by TemplateMo and it is suitable for your gaming shop ecommerce websites. Feel free to use this for any purpose. Thank you.</p>
-          <form id="qty" action="#">
-            <input type="qty" class="form-control" id="1" aria-describedby="quantity" placeholder="1">
-            <button type="submit"><i class="fa fa-shopping-bag"></i> ADD TO CART</button>
-          </form> --}}
-          {{-- <ul>
-            <li><span>Game ID:</span> COD MMII</li>
-            <li><span>Genre:</span> <a href="#">Action</a>, <a href="#">Team</a>, <a href="#">Single</a></li>
-            <li><span>Multi-tags:</span> <a href="#">War</a>, <a href="#">Battle</a>, <a href="#">Royal</a></li>
-          </ul> --}}
-        </div>
-        <div class="col-lg-12">
-          <div class="sep"></div>
         </div>
       </div>
-    </div>
-  </div>
+    </form>
 
   {{-- <div class="more-info">
     <div class="container">

@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\DB;
 
 use App\Http\Controllers\C_Utama;
 use App\Http\Controllers\C_Metode;
+use App\Http\Controllers\C_Pesanan;
 
 
 /*
@@ -31,6 +32,7 @@ Route::get('/tabDetails/{id}', [C_Utama::class, 'getId']);
 // });
 
 Route::resource('/kategori', C_Utama::class);
+Route::resource('/pesanan', C_Pesanan::class);
 Route::resource('/metode', C_Metode::class);
 
 

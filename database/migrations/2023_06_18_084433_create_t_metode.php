@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id('id_metode');
             $table->string('nama_metode');
             $table->integer('biaya_administrasi');
-
+            $table->string('gambar_metode');
             $table->timestamps();
         });
     }
