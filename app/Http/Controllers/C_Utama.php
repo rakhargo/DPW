@@ -85,7 +85,8 @@ class C_Utama extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $model = M_Kategori::find($id);
+        return view('admin/kategoriEdit', compact('model'));
     }
 
     /**
@@ -93,7 +94,12 @@ class C_Utama extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $model = M_Kategori::find($id);
+        $model->nama_kategori = $request->nama_kategori;
+        $model->gambar_kategori = $request->gambar_kategori;
+
+        $model->save();
+        return redirect('/tabAdmin');
     }
 
     /**
@@ -101,6 +107,8 @@ class C_Utama extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $model = M_Kategori::find($id);
+        $model->delete();
+        return redirect('/tabAdmin');
     }
 }

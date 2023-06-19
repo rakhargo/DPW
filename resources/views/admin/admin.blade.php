@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -125,6 +124,8 @@ https://templatemo.com/tm-589-lugx-gaming
                         <th>ID</th>
                         <th>Kategori</th>
                         <th>Logo</th>
+                        <th>Laman Voucher</th>
+                        <th colspan="2">Action</th>
                     </tr>
                 </thead>
                 <?php $noK = 1; ?>
@@ -134,6 +135,14 @@ https://templatemo.com/tm-589-lugx-gaming
                         <td>{{ $noK }}</td>
                         <td>{{ $kategori->nama_kategori }}</td>
                         <td><img src="assets/imagesdb{{ $kategori->gambar_kategori }}" alt""></td>
+                        <td><a class="btn btn-sm btn-primary"href="{{ url('voucher/'.$kategori->id) }}">Vouchers</a></td>
+                        <td>
+                            <a class="btn btn-sm btn-primary"href="{{ url('kategoriEdit/'.$kategori->id.'')}}">Edit</a>
+                            <form action="{{ url('kategori/'.$kategori->id) }}" method="POST">
+                                @csrf <input type="hidden" name="_method" value="DELETE">
+                            <button class="btn btn-sm btn-danger" type="submit">Delete</button>
+                            </form>
+                        </td>
                     </tr>
                     <?php $noK++; ?>
                     @endforeach
@@ -173,6 +182,7 @@ https://templatemo.com/tm-589-lugx-gaming
                         <th>ID</th>
                         <th>Metode</th>
                         <th>Biaya Admin</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -182,6 +192,13 @@ https://templatemo.com/tm-589-lugx-gaming
                         <td>{{ $noM }}</td>
                         <td>{{ $metode->nama_metode }}</td>
                         <td>{{ $metode->biaya_administrasi }}</td>
+                        <td>
+                            <a class="btn btn-sm btn-primary" href="{{ url('metodeEdit/'.$metode->id.'')}}">Edit</a>
+                            <form action="{{ url('metode/'.$metode->id) }}" method="POST">
+                                @csrf <input type="hidden" name="_method" value="DELETE">
+                            <button class="btn btn-sm btn-danger" type="submit">Delete</button>
+                            </form>
+                        </td>
                     </tr>
                     <?php $noM++; ?>
                     @endforeach

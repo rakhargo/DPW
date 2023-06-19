@@ -56,7 +56,8 @@ class C_Metode extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $model = M_Metode::find($id);
+        return view('admin/metodeEdit', compact('model'));
     }
 
     /**
@@ -64,7 +65,12 @@ class C_Metode extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $model = M_Metode::find($id);
+        $model->nama_metode = $request->nama_metode;
+        $model->biaya_administrasi = $request->biaya_administrasi;
+
+        $model->save();
+        return redirect('/tabAdmin');
     }
 
     /**
@@ -72,6 +78,9 @@ class C_Metode extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $model = M_Metode::find($id);
+        $model->delete();
+        return redirect('/tabAdmin');
+
     }
 }
