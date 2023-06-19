@@ -27,13 +27,27 @@ class C_Pesanan extends Controller
     /**
      * Store a newly created resource in storage.
      */
+    public function getEmail(Request $request)
+    {
+        $data_condition = M_Pesanan::where('email', $request->email)->get(); // ini syntax buat misal manggil where
+        return view('tabRiwayat', compact('data_condition'));
+    }
+
     public function store(Request $request)
     {
+        $selectedItemVoucher = explode('|', $request->voucher);
+        $id_voucher = $selectedItemVoucher[0]; // Mendapatkan ID
+        $harga_voucher = $selectedItemVoucher[1]; // Mendapatkan harga
+
+        $selectedItemMetode = explode('|', $request->metode);
+        $id_metode = $selectedItemMetode[0]; // Mendapatkan ID
+        $biaya_admin = $selectedItemMetode[1]; // Mendapatkan harga
+
         $model = new M_Pesanan;
         $model->id_kategori = $request->id_kategori;
-        $model->id_voucher = $request->id_voucher;
-        $model->id_metode = $request->id_metode;
-        $model->total_harga = 1000;
+        $model->id_voucher = $id_voucher;
+        $model->id_metode = $id_metode;
+        $model->total_harga = $harga_voucher + $biaya_admin;
         $model->email = $request->email;
         $model->waktu_pesanan = Carbon::now()->format('Y-m-d H:i:s');
 

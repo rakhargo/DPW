@@ -1,3 +1,4 @@
+{{-- @dd($data_condition) --}}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -59,7 +60,7 @@ https://templatemo.com/tm-589-lugx-gaming
                       <li><a href="/">Home</a></li>
                       <li><a href="tabVoucher">Our Shop</a></li>
                       {{-- <li><a href="tabDetails">Product Details</a></li> --}}
-                      <li><a href="tabRiwayat" class="active">Lacak pesanan</a></li>
+                      <li><a href="tabLacak" class="active">Lacak pesanan</a></li>
                       <li><a href="tabAdmin">Admin page</a></li>
                   </ul>   
                     <a class='menu-trigger'>
@@ -87,18 +88,39 @@ https://templatemo.com/tm-589-lugx-gaming
   <div class="contact-page section">
     <div class="container">
       <div class="row">
-        <h5>Lacak pesanan menggunakan email</h5>
+        <h5>Pesanan dengan email {{ $data_condition['email'] }}</h5>
         <br><br>
         <div class="col-lg-6 align-self-center">
-          {{-- <h4>Anda bisa cek riwayat pesanan Anda melalui email</h4> --}}
-          <div class="col-lg-6">
-            <div class="search-input">
-              <form id="search" action="#">
-                <input type="text" placeholder="Email" id='searchText' name="searchKeyword" onkeypress="handle" />
-                <button role="button">Search Now</button>
-              </form>
-            </div>
-          </div>
+          <table>
+            <tr>
+                <th>NO</th>
+                <th>Kategori</th>
+                <th>Nominal Voucher</th>
+                <th>Metode pembayaran</th>
+                <th>Total Harga</th>
+                <th>Waktu pesanan</th>
+            </tr>
+            <?php
+            $no = 1;
+            ?>
+            @foreach ($data_condition as $item)
+            <tr>
+                <td>{{ $no }}</td>
+                @foreach ($item['id_kategori'] as $kat)
+                <td>{{ $kat }}</td>
+                @endforeach
+                {{-- <td>{{ $item['id_voucher'] }}</td>
+                <td>{{ $item['id_metode'] }}</td>
+                <td>{{ $item['total_harga'] }}</td>
+                <td>{{ $item['waktu_pesanan'] }}</td> --}}
+                {{-- <td>Waktu pesanan</td> --}}
+            </tr>
+                
+            <?php
+            $no++;
+            ?>
+            @endforeach
+          </table>
         </div>
       </div>
     </div>

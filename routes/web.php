@@ -24,6 +24,8 @@ Route::get('/tabAdmin', [C_Utama::class, 'admin']);
 
 Route::get('/tabDetails/{id}', [C_Utama::class, 'getId']);
 
+// Route::get('/tabRiwayat', [C_Utama::class, 'getId']);
+Route::get('/tabRiwayat', [C_Pesanan::class, 'getEmail']);
 // Route::get('/', function () {
 //     // Route::resource('kategori', C_Utama::class);
 //     // $datas = ;
@@ -46,9 +48,10 @@ Route::get('/tabVoucher', function () {
 //     return view('tabDetails', ['id' => $id]); 
 // });
 
-Route::get('/tabRiwayat', function () {
-    return view('tabRiwayat');
+Route::get('/tabLacak', function () {
+    return view('tabLacak');
 });
+
 
 // Route::get('/tabAdmin', function () {
 //     return view('admin/admin');
