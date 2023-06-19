@@ -130,7 +130,7 @@ https://templatemo.com/tm-589-lugx-gaming
                         <th>ID</th>
                         <th>Kategori</th>
                         <th>Logo</th>
-                        <th>Action</th>
+                        <th colspan="2">Action</th>
                     </tr>
                 </thead>
                 <?php $noK = 1; ?>
@@ -141,8 +141,11 @@ https://templatemo.com/tm-589-lugx-gaming
                         <td>{{ $kategori->nama_kategori }}</td>
                         <td><img src="assets/imagesdb{{ $kategori->gambar_kategori }}" alt""></td>
                         <td>
-                            <button class="btn btn-sm btn-primary">Edit</button>
-                            <button class="btn btn-sm btn-danger">Delete</button>
+                            <a class="btn btn-sm btn-primary"href="{{ url('kategoriEdit/'.$kategori->id.'')}}">Edit</a>
+                            <form action="{{ url('kategori/'.$kategori->id) }}" method="POST">
+                                @csrf <input type="hidden" name="_method" value="DELETE">
+                            <button class="btn btn-sm btn-danger" type="submit">Delete</button>
+                            </form>
                         </td>
                     </tr>
                     <?php $noK++; ?>
@@ -194,8 +197,11 @@ https://templatemo.com/tm-589-lugx-gaming
                         <td>{{ $metode->nama_metode }}</td>
                         <td>{{ $metode->biaya_administrasi }}</td>
                         <td>
-                            <button class="btn btn-sm btn-primary">Edit</button>
-                            <button class="btn btn-sm btn-danger">Delete</button>
+                            <a class="btn btn-sm btn-primary" href="{{ url('metodeEdit/'.$metode->id.'')}}">Edit</a>
+                            <form action="{{ url('metode/'.$metode->id) }}" method="POST">
+                                @csrf <input type="hidden" name="_method" value="DELETE">
+                            <button class="btn btn-sm btn-danger" type="submit">Delete</button>
+                            </form>
                         </td>
                     </tr>
                     <?php $noM++; ?>
