@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -98,15 +99,19 @@ https://templatemo.com/tm-589-lugx-gaming
                     </tr>
                 </thead>
                 <tbody>
+                    <?php $noP = 1; ?>
+                    @foreach ($listPesanan as $pesanan)
                     <tr>
-                        <td>1</td>
-                        <td>Kategori Gemink</td>
-                        <td>Metode Gemink</td>
-                        <td>20.000</td>
-                        <td>QRIS</td>
-                        <td>22.500</td>
-                        <td>25:23</td>
+                        <td>{{ $noP }}</td>
+                        <td>{{ $pesanan->id_kategori }}</td>
+                        <td>{{ $pesanan->id_voucher }}</td>
+                        <td>{{ $pesanan->id_metode }}</td>
+                        <td>{{ $pesanan->total_harga }}</td>
+                        <td>{{ $pesanan->email }}</td>
+                        <td>{{ $pesanan->waktu_pesanan }}</td>
                     </tr>
+                    <?php $noP++; ?>
+                    @endforeach
                 </tbody>
             </table>
         </div>
@@ -122,17 +127,21 @@ https://templatemo.com/tm-589-lugx-gaming
                         <th>Logo</th>
                     </tr>
                 </thead>
+                <?php $noK = 1; ?>
                 <tbody>
+                    @foreach ($listKategori as $kategori)
                     <tr>
-                        <td>1</td>
-                        <td>Kategori Gemink</td>
-                        <td>Logo Gemink</td>
+                        <td>{{ $noK }}</td>
+                        <td>{{ $kategori->nama_kategori }}</td>
+                        <td><img src="assets/imagesdb{{ $kategori->gambar_kategori }}" alt""></td>
                     </tr>
+                    <?php $noK++; ?>
+                    @endforeach
                 </tbody>
             </table>
         </div>
     </div>
-    <div class="section trending">
+    {{-- <div class="section trending">
         <div class="container">
             <h1>Table Voucher</h1>
             <table class="table">
@@ -154,7 +163,7 @@ https://templatemo.com/tm-589-lugx-gaming
                 </tbody>
             </table>
         </div>
-    </div>
+    </div> --}}
     <div class="section trending">
         <div class="container">
             <h1>Table Metode</h1> <a href="{{url('metode/create')}}">Create</a>
@@ -167,11 +176,15 @@ https://templatemo.com/tm-589-lugx-gaming
                     </tr>
                 </thead>
                 <tbody>
+                    <?php $noM = 1; ?>
+                    @foreach ($listMetode as $metode)
                     <tr>
-                        <td>1</td>
-                        <td>Cash</td>
-                        <td>2500</td>
+                        <td>{{ $noM }}</td>
+                        <td>{{ $metode->nama_metode }}</td>
+                        <td>{{ $metode->biaya_administrasi }}</td>
                     </tr>
+                    <?php $noM++; ?>
+                    @endforeach
                 </tbody>
             </table>
         </div>

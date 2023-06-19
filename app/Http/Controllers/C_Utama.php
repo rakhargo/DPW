@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\M_Kategori;
 use App\Models\M_Voucher;
+use App\Models\M_Pesanan;
 use App\Models\M_Metode;
  
 class C_Utama extends Controller
@@ -18,7 +19,18 @@ class C_Utama extends Controller
 
         return view('index', compact('datas')); // buat return ke index dengan passing parameter
     }
+    public function admin()
+    {
+        $listKategori = M_Kategori::all();
+        $listMetode = M_Metode::all();
+        $listPesanan = M_Pesanan::all();
+        return view('admin/admin', compact('listKategori','listMetode', 'listPesanan')); // buat return ke index dengan passing parameter
+    }
 
+    public function show_allPesanan(){
+
+
+    }
     public function getId($id)
     {
         $data_join = M_Kategori::join('t_voucher', 't_kategori.id_kategori', '=', 't_voucher.id_kategori')

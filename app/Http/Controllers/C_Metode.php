@@ -14,6 +14,11 @@ class C_Metode extends Controller
     {
         //
     }
+    public function admin()
+    {
+        $listMetode = M_Metode::all();
+        return view('admin/admin', compact('listMetode')); // buat return ke index dengan passing parameter
+    }
 
     /**
      * Show the form for creating a new resource.
