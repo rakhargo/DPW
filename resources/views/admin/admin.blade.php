@@ -96,6 +96,7 @@ https://templatemo.com/tm-589-lugx-gaming
                         <th>Harga Total</th>
                         <th>Email Pelanggan</th>
                         <th>Waktu Pesanan</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -109,6 +110,10 @@ https://templatemo.com/tm-589-lugx-gaming
                         <td>{{ $pesanan->total_harga }}</td>
                         <td>{{ $pesanan->email }}</td>
                         <td>{{ $pesanan->waktu_pesanan }}</td>
+                        <td>
+                            <button class="btn btn-sm btn-primary">Edit</button>
+                            <button class="btn btn-sm btn-danger">Delete</button>
+                        </td>
                     </tr>
                     <?php $noP++; ?>
                     @endforeach
@@ -125,6 +130,7 @@ https://templatemo.com/tm-589-lugx-gaming
                         <th>ID</th>
                         <th>Kategori</th>
                         <th>Logo</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <?php $noK = 1; ?>
@@ -134,6 +140,10 @@ https://templatemo.com/tm-589-lugx-gaming
                         <td>{{ $noK }}</td>
                         <td>{{ $kategori->nama_kategori }}</td>
                         <td><img src="assets/imagesdb{{ $kategori->gambar_kategori }}" alt""></td>
+                        <td>
+                            <button class="btn btn-sm btn-primary">Edit</button>
+                            <button class="btn btn-sm btn-danger">Delete</button>
+                        </td>
                     </tr>
                     <?php $noK++; ?>
                     @endforeach
@@ -173,6 +183,7 @@ https://templatemo.com/tm-589-lugx-gaming
                         <th>ID</th>
                         <th>Metode</th>
                         <th>Biaya Admin</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -182,6 +193,10 @@ https://templatemo.com/tm-589-lugx-gaming
                         <td>{{ $noM }}</td>
                         <td>{{ $metode->nama_metode }}</td>
                         <td>{{ $metode->biaya_administrasi }}</td>
+                        <td>
+                            <button class="btn btn-sm btn-primary">Edit</button>
+                            <button class="btn btn-sm btn-danger">Delete</button>
+                        </td>
                     </tr>
                     <?php $noM++; ?>
                     @endforeach
