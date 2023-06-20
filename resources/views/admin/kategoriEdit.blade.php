@@ -86,7 +86,7 @@ https://templatemo.com/tm-589-lugx-gaming
     
 <div class="container">
     <h1>Edit Kategori Voucher</h1>
-    <form action="{{ url('kategori/'.$model->id) }}" method="POST">
+    <form action="{{ url('kategori/'.$model->id) }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
           <img src="/assets/imagesdb/{{ $model->gambar_kategori }}">
