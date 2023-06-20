@@ -65,8 +65,9 @@ class C_Voucher extends Controller
     public function edit(string $id, $idkat)
     {
         $model = M_Voucher::find($id);
-        $kategori = M_Kategori::where('id', $id)->first();
-        return view('admin/voucherEdit', compact('model', 'kategori'));
+        $kategori = M_Kategori::where('id', $idkat)->first();
+        $title = $kategori->nama_kategori;
+        return view('admin/voucherEdit', compact('model', 'title'));
     }
 
     /**

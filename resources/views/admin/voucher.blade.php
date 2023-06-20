@@ -85,7 +85,7 @@ https://templatemo.com/tm-589-lugx-gaming
   </div>
     <div class="section trending">
         <div class="container">
-            <h1>Table Voucher Kategori {{ $title }}</h1>{{-- <a href="{{url('voucherCreate/'.$kategori->id.'')}}">Create</a> --}}
+            <h1>Table Voucher Kategori {{ $title }}</h1><a href="{{url('voucherCreate/'.$idkat.'')}}">Create</a>
             <table class="table">
                 <thead>
                     <tr>

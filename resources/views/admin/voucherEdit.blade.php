@@ -99,7 +99,7 @@ https://templatemo.com/tm-589-lugx-gaming
             <input type="text" class="form-control" id="priceInput" value="{{ $model->harga_voucher }}" name="harga_voucher">
         </div>
         <div class="form-group">
-            <label for="kategori">ID Kategori {{ $kategori->nama_kategori }}</label>
+            <label for="kategori">ID Kategori {{ $title }}</label>
             <input type="text" class="form-control" id="kategori" value="{{ $model->id_kategori }}" name="id_kategori" readonly>
         </div>
         <br/>

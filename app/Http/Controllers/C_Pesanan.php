@@ -62,9 +62,9 @@ class C_Pesanan extends Controller
         $model->email = $request->email;
         $model->waktu_pesanan = Carbon::now()->format('Y-m-d H:i:s');
         
-        $kategori = M_Kategori::where('id_kategori', $request->id_kategori)->first();
-        $metode = M_Metode::where('id_metode', $id_metode)->first();
-        $voucher = M_Voucher::where('id_voucher', $id_voucher)->first();
+        $kategori = M_Kategori::where('id', $request->id_kategori)->first();
+        $metode = M_Metode::where('id', $id_metode)->first();
+        $voucher = M_Voucher::where('id', $id_voucher)->first();
         
         // $model->save();
         return view('tabConfirmPesanan', compact('model', 'kategori', 'metode', 'voucher'));
