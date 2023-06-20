@@ -34,11 +34,11 @@ class C_Utama extends Controller
     }
     public function getId($id)
     {
-        $data_join = M_Kategori::join('t_voucher', 't_kategori.id_kategori', '=', 't_voucher.id_kategori')
+        $data_join = M_Kategori::join('t_voucher', 't_kategori.id', '=', 't_voucher.id_kategori')
         ->where('t_voucher.id_kategori', '=', $id)
-        ->select('t_kategori.id_kategori', 't_voucher.id_voucher', 't_kategori.nama_kategori', 't_kategori.gambar_kategori', 't_voucher.id_kategori', 't_voucher.nominal_voucher', 't_voucher.harga_voucher')
+        ->select('t_kategori.id', 't_voucher.id', 't_kategori.nama_kategori', 't_kategori.gambar_kategori', 't_voucher.id_kategori', 't_voucher.nominal_voucher', 't_voucher.harga_voucher')
         ->get();
-        $data_condition = M_Kategori::where('id_kategori', $id)->first(); // ini syntax buat misal manggil where
+        $data_condition = M_Kategori::where('id', $id)->first(); // ini syntax buat misal manggil where
         $data_metode = M_Metode::all();
         $datas = [
             'join' => $data_join,
