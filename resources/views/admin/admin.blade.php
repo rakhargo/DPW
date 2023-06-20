@@ -135,7 +135,7 @@ https://templatemo.com/tm-589-lugx-gaming
                         <td>{{ $noK }}</td>
                         <td>{{ $kategori->nama_kategori }}</td>
                         <td><img src="assets/imagesdb{{ $kategori->gambar_kategori }}" alt""></td>
-                        <td><a class="btn btn-sm btn-primary"href="{{ url('voucher/'.$kategori->id) }}">Vouchers</a></td>
+                        <td><a class="btn btn-sm btn-primary"href="{{ url('voucherKategori/'.$kategori->id) }}">Vouchers</a></td>
                         <td>
                             <a class="btn btn-sm btn-primary"href="{{ url('kategoriEdit/'.$kategori->id.'')}}">Edit</a>
                             <form action="{{ url('kategori/'.$kategori->id) }}" method="POST">

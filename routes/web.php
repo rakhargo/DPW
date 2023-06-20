@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\DB;
 
 use App\Http\Controllers\C_Utama;
 use App\Http\Controllers\C_Metode;
+use App\Http\Controllers\C_Voucher;
 use App\Http\Controllers\C_Pesanan;
 
 
@@ -25,6 +26,8 @@ Route::get('/tabAdmin', [C_Utama::class, 'admin']);
 Route::get('/tabDetails/{id}', [C_Utama::class, 'getId']);
 Route::get('/metodeEdit/{id}', [C_Metode::class, 'edit']);
 Route::get('/kategoriEdit/{id}', [C_Utama::class, 'edit']);
+Route::get('/voucherKategori/{id}', [C_Voucher::class, 'voucherKategori']);
+Route::get('/voucherEdit/{id}/{idkat}', [C_Voucher::class, 'edit']);
 
 // Route::get('/tabRiwayat', [C_Utama::class, 'getId']);
 Route::get('/tabRiwayat', [C_Pesanan::class, 'getEmail']);
@@ -44,11 +47,13 @@ Route::post('/tabInvoice', [C_Pesanan::class, 'invoice']);
 Route::resource('/kategori', C_Utama::class);
 Route::resource('/pesanan', C_Pesanan::class);
 Route::resource('/metode', C_Metode::class);
+Route::resource('/voucher', C_Voucher::class);
 
 // Route get => pegawai/{id}/edit => edit
 Route::get('/tabVoucher', function () {
     return view('tabVoucher');
 });
+Route::get('/voucherCreate/{id}', [C_Voucher::class, 'create']);
 
 // Route::get('/tabDetails/{id}', function () {
 //     $id = $_GET['id'];
@@ -72,7 +77,7 @@ Route::get('/kategoriCreate', function () {
     return view('admin/kategoriCreate');
 });
 Route::get('/metodeCreate', function () {
-    return view('admin/Create');
+    return view('admin/metodeCreate');
 });
 // Route::get('/metodeEdit/{id}', function () {
 //     return view('admin/metodeEdit');
