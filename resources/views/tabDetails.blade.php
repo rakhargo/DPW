@@ -82,7 +82,7 @@ https://templatemo.com/tm-589-lugx-gaming
     </div>
   </div>
 
-  <form action="{{ url('pesanan') }}" method="post">
+  <form action="{{ url('tabConfirm') }}" method="post" id="orderForm">
     @csrf
     <div class="single-product section">
       <div class="container">
@@ -150,7 +150,8 @@ https://templatemo.com/tm-589-lugx-gaming
                 </div>
                 <br><br>
                 
-                <button type="submit"><i class="fa fa-shopping-bag"></i> ADD TO CART</button>
+                <button type="submit" id="submitBtn"><i class="fa fa-shopping-bag"></i> ADD TO CART</button>
+                
                 {{-- <span class="price"><em>$28</em> $22</span>
                 <p>LUGX Gaming Template is based on the latest Bootstrap 5 CSS framework. This template is provided by TemplateMo and it is suitable for your gaming shop ecommerce websites. Feel free to use this for any purpose. Thank you.</p> --}}
                 {{-- <form id="qty" action="#"> --}}
@@ -285,6 +286,7 @@ https://templatemo.com/tm-589-lugx-gaming
   <script src="/assets/js/owl-carousel.js"></script>
   <script src="/assets/js/counter.js"></script>
   <script src="/assets/js/custom.js"></script>
+  <script src="/assets/js/script.js"></script>
 
   </body>
 </html>

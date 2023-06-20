@@ -33,9 +33,14 @@ Route::get('/voucherEdit/{id}/{idkat}', [C_Voucher::class, 'edit']);
 
 // Route::get('/tabRiwayat', [C_Utama::class, 'getId']);
 Route::get('/tabRiwayat', [C_Pesanan::class, 'getEmail']);
+Route::post('/tabConfirm', [C_Pesanan::class, 'confirm']);
+Route::post('/tabInvoice', [C_Pesanan::class, 'invoice']);
 // Route::get('/', function () {
-//     // Route::resource('kategori', C_Utama::class);
-//     // $datas = ;
+    //     // Route::resource('kategori', C_Utama::class);
+    //     // $datas = ;
+// Route::get('/tabConfirm', function () {
+//     return view('tabConfirmPesanan');
+// });
 
 //     // return view('index', compact('datas'));
 //     return $datas;
