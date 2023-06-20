@@ -2,11 +2,13 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 use App\Http\Controllers\C_Utama;
 use App\Http\Controllers\C_Metode;
 use App\Http\Controllers\C_Voucher;
 use App\Http\Controllers\C_Pesanan;
+use App\Http\Controllers\C_Session;
 
 
 /*
@@ -79,6 +81,9 @@ Route::get('/kategoriCreate', function () {
 Route::get('/metodeCreate', function () {
     return view('admin/metodeCreate');
 });
+Route::get('/loginadm', [C_Session::class, 'index']);
+Route::get('/loginadm/logout', [C_Session::class, 'logout']);
+Route::post('/loginadm/login', [C_Session::class, 'login']);
 // Route::get('/metodeEdit/{id}', function () {
 //     return view('admin/metodeEdit');
 // });

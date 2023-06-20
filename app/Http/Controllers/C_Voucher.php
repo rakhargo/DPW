@@ -22,7 +22,9 @@ class C_Voucher extends Controller
     {   
         $listVoucher = M_Voucher::where('id_kategori', $id)->get();
         $kategori = M_Kategori::where('id', $id)->first();
-        return view('admin/voucher', compact('listVoucher', 'kategori')); // buat return ke index dengan passing parameter
+        $title = $kategori->nama_kategori;
+        $idkat = $kategori->id;
+        return view('admin/voucher', compact('listVoucher', 'title', 'idkat')); // buat return ke index dengan passing parameter
     }
 
     /**
@@ -36,7 +38,7 @@ class C_Voucher extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Store a newly crehphated resource in storage.
      */
     public function store(Request $request)
     {

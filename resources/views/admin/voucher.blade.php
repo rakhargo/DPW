@@ -57,8 +57,9 @@ https://templatemo.com/tm-589-lugx-gaming
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
                       <li><a href="/">Home</a></li>
-                      <li><a href="{{url('/tabVoucher')}}">Our Shop</a></li>
-                      <li><a href="{{url('/tabRiwayat')}}">Lacak pesanan</a></li>
+                      {{-- <li><a href="{{url('/tabVoucher')}}">Our Shop</a></li> --}}
+                      <li><a href="{{url('/tabLacak')}}">Lacak pesanan</a></li>
+                      <li><a href="{{url('loginadm/logout')}}">Logout</a></li>
                       <li><a href="{{url('/tabAdmin')}}">Admin page</a></li>
                   </ul>   
                     <a class='menu-trigger'>
@@ -84,7 +85,7 @@ https://templatemo.com/tm-589-lugx-gaming
   </div>
     <div class="section trending">
         <div class="container">
-            <h1>Table Voucher Kategori {{ $kategori->nama_kategori }}</h1> <a href="{{url('voucherCreate/'.$kategori->id.'')}}">Create</a>
+            <h1>Table Voucher Kategori {{ $title }}</h1>{{-- <a href="{{url('voucherCreate/'.$kategori->id.'')}}">Create</a> --}}
             <table class="table">
                 <thead>
                     <tr>
