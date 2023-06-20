@@ -82,8 +82,8 @@ class C_Pesanan extends Controller
         $model->waktu_pesanan = Carbon::now()->format('Y-m-d H:i:s');
         
         $kategori = M_Kategori::where('id', $request->kategori)->first();
-        $metode = M_Metode::where('id', $request->metode)->first();
-        $voucher = M_Voucher::where('id', $request->voucher)->first();
+        $metode   = M_Metode::where('id', $request->metode)->first();
+        $voucher  = M_Voucher::where('id', $request->voucher)->first();
 
         $model->save();
         return view('tabInvoice', compact('model', 'kategori', 'metode', 'voucher'));
