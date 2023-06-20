@@ -118,7 +118,7 @@ class C_Utama extends Controller
         }
 
         $model->save();
-        // return redirect('/tabAdmin');
+        return redirect('/tabAdmin');
     }
 
     /**
