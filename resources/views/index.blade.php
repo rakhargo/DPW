@@ -179,7 +179,7 @@ https://templatemo.com/tm-589-lugx-gaming
           <div class="item">
             <div class="thumb">
               <a href="{{ url('tabDetails/'.$kateg->id.'') }}">
-                <img src="assets/imagesdb/{{ $kateg->gambar_kategori }}" alt="">
+                <img src="{{ asset('storage/' .$kateg->gambar_kategori) }}" alt="">
               </a>
             </div>
             <h4>{{ $kateg->nama_kategori }}</h4>
