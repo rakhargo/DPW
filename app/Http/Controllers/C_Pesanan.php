@@ -31,11 +31,11 @@ class C_Pesanan extends Controller
     {
         $postEmail = $request->email;
         // $data_condition = M_Pesanan::where('email', $request->email)->get(); // ini syntax buat misal manggil where
-        $data_join = M_Pesanan::join('t_voucher', 't_pesanan.id_voucher', '=', 't_voucher.id_voucher')
-        ->join('t_kategori', 't_pesanan.id_kategori', '=', 't_kategori.id_kategori')
-        ->join('t_metode', 't_pesanan.id_metode', '=', 't_metode.id_metode')
+        $data_join = M_Pesanan::join('t_voucher', 't_pesanan.id_voucher', '=', 't_voucher.id')
+        ->join('t_kategori', 't_pesanan.id_kategori', '=', 't_kategori.id')
+        ->join('t_metode', 't_pesanan.id_metode', '=', 't_metode.id')
         ->where('email', $request->email)
-        ->select('t_kategori.id_kategori', 't_kategori.nama_kategori', 't_kategori.gambar_kategori', 't_voucher.id_voucher', 't_voucher.nominal_voucher', 't_voucher.harga_voucher', 't_metode.id_metode', 't_metode.nama_metode', 't_pesanan.total_harga', 't_pesanan.waktu_pesanan')
+        ->select('t_kategori.id', 't_kategori.nama_kategori', 't_kategori.gambar_kategori', 't_voucher.id', 't_voucher.nominal_voucher', 't_voucher.harga_voucher', 't_metode.id', 't_metode.nama_metode', 't_pesanan.total_harga', 't_pesanan.waktu_pesanan')
         ->get();
         return view('tabRiwayat', compact('data_join', 'postEmail'));
     }

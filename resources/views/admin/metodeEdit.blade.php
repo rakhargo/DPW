@@ -57,8 +57,9 @@ https://templatemo.com/tm-589-lugx-gaming
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
                       <li><a href="/">Home</a></li>
-                      <li><a href="/tabVoucher">Our Shop</a></li>
-                      <li><a href="/tabRiwayat">Lacak pesanan</a></li>
+                      {{-- <li><a href="/tabVoucher">Our Shop</a></li> --}}
+                      <li><a href="/tabLacak">Lacak pesanan</a></li>
+                      <li><a href="{{url('loginadm/logout')}}">Logout</a></li>
                       <li><a href="/tabAdmin">Admin page</a></li>
                   </ul>   
                     <a class='menu-trigger'>
@@ -97,6 +98,10 @@ https://templatemo.com/tm-589-lugx-gaming
             <label for="priceInput">Biaya Administrasi</label>
             <input type="text" class="form-control" id="priceInput" name="biaya_administrasi" value="{{ $model->biaya_administrasi }}">
         </div>
+        <div class="form-group">
+          <label for="pictureInput">Gambar Metode</label>
+          <input type="file" class="form-control" id="pictureInput" name="gambar_metode">
+      </div>
         <br/>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
