@@ -57,7 +57,7 @@ https://templatemo.com/tm-589-lugx-gaming
                     <ul class="nav">
                       <li><a href="/">Home</a></li>
                       <li><a href="tabVoucher">Our Shop</a></li>
-                      <li><a href="tabRiwayat">Lacak pesanan</a></li>
+                      <li><a href="tabLacak">Lacak pesanan</a></li>
                       <li><a href="tabAdmin">Admin page</a></li>
                   </ul>   
                     <a class='menu-trigger'>
@@ -102,14 +102,15 @@ https://templatemo.com/tm-589-lugx-gaming
                 <div class="col-3" >
                   <div class="item">
                     <div class="thumb">
-                      <input type="radio"  name="id_voucher" value="{{ $datajoin->id_voucher }}">
+                      <input type="radio"  name="voucher" value="{{ $datajoin->id_voucher . '|' . $datajoin->harga_voucher }}">
+                      {{-- <input type="hidden" name="harga_voucher" value="{{ $datajoin->harga_voucher }}"> --}}
                       {{-- <a href=""> --}}
                         <img src="/assets/imagesdb/{{ $datajoin->gambar_kategori }}" alt="">
                         {{-- </a> --}}
                       </div>
-                    <h6>{{ $datajoin->nominal_voucher }}</h6>
-                     
-                  </div>
+                      <h6>{{ $datajoin->nominal_voucher }}</h6>
+                      
+                    </div>
                 </div>
                 @endforeach
               </div>
@@ -121,12 +122,13 @@ https://templatemo.com/tm-589-lugx-gaming
                   <div class="col-3" >
                     <div class="item">
                       <div class="thumb">
-                        <input type="radio" name="id_metode" value="{{ $datametode->id_metode }}">
+                        <input type="radio" name="metode" value="{{ $datametode->id_metode . '|' . $datametode->biaya_administrasi }}">
+                        {{-- <input type="hidden" name="biaya_admin" value="{{ $datametode->biaya_administrasi }}"> --}}
                         {{-- <a href=""> --}}
                           <img src="/assets/imagesdb/{{ $datametode->gambar_metode }}" alt="">
-                        {{-- </a> --}}
-                      </div>
-                      <h6>{{ $datametode->nama_metode }}</h6>
+                          {{-- </a> --}}
+                        </div>
+                        <h6>{{ $datametode->nama_metode }}</h6>
                     </div>
                   </div>
                   @endforeach

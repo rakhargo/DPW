@@ -1,5 +1,3 @@
-{{-- @dd($data_condition) --}}
-{{-- @dd($postEmail) --}}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -60,6 +58,7 @@ https://templatemo.com/tm-589-lugx-gaming
                     <ul class="nav">
                       <li><a href="/">Home</a></li>
                       <li><a href="tabVoucher">Our Shop</a></li>
+                      {{-- <li><a href="tabDetails">Product Details</a></li> --}}
                       <li><a href="tabLacak" class="active">Lacak pesanan</a></li>
                       <li><a href="tabAdmin">Admin page</a></li>
                   </ul>   
@@ -88,36 +87,18 @@ https://templatemo.com/tm-589-lugx-gaming
   <div class="contact-page section">
     <div class="container">
       <div class="row">
-        <h5>Pesanan dengan email {{ $postEmail }}</h5>
+        <h5>Lacak pesanan menggunakan email</h5>
         <br><br>
         <div class="col-lg-6 align-self-center">
-          <table class="table">
-            <tr>
-                <th>NO</th>
-                <th>Kategori</th>
-                <th>Nominal Voucher</th>
-                <th>Metode pembayaran</th>
-                <th>Total Harga</th>
-                <th>Waktu pesanan</th>
-            </tr>
-            <?php
-            $no = 1;
-            ?>
-            @foreach ($data_join as $item)
-            <tr>
-                <td>{{ $no }}</td>
-                <td>{{ $item['nama_kategori'] }}</td>
-                <td>{{ $item['nominal_voucher'] }}</td>
-                <td>{{ $item['nama_metode'] }}</td>
-                <td>{{ $item['total_harga'] }}</td>
-                <td>{{ $item['waktu_pesanan'] }}</td>
-            </tr>
-                
-            <?php
-            $no++;
-            ?>
-            @endforeach
-          </table>
+          {{-- <h4>Anda bisa cek riwayat pesanan Anda melalui email</h4> --}}
+          <div class="col-lg-6">
+            <div class="search-input">
+              <form action="tabRiwayat">
+                <input type="text" placeholder="Email" name="email"/>
+                <button role="button">Search Now</button>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
     </div>

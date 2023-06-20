@@ -27,13 +27,34 @@ class C_Pesanan extends Controller
     /**
      * Store a newly created resource in storage.
      */
+    public function getEmail(Request $request)
+    {
+        $postEmail = $request->email;
+        // $data_condition = M_Pesanan::where('email', $request->email)->get(); // ini syntax buat misal manggil where
+        $data_join = M_Pesanan::join('t_voucher', 't_pesanan.id_voucher', '=', 't_voucher.id_voucher')
+        ->join('t_kategori', 't_pesanan.id_kategori', '=', 't_kategori.id_kategori')
+        ->join('t_metode', 't_pesanan.id_metode', '=', 't_metode.id_metode')
+        ->where('email', $request->email)
+        ->select('t_kategori.id_kategori', 't_kategori.nama_kategori', 't_kategori.gambar_kategori', 't_voucher.id_voucher', 't_voucher.nominal_voucher', 't_voucher.harga_voucher', 't_metode.id_metode', 't_metode.nama_metode', 't_pesanan.total_harga', 't_pesanan.waktu_pesanan')
+        ->get();
+        return view('tabRiwayat', compact('data_join', 'postEmail'));
+    }
+
     public function store(Request $request)
     {
+        $selectedItemVoucher = explode('|', $request->voucher);
+        $id_voucher = $selectedItemVoucher[0]; // Mendapatkan ID
+        $harga_voucher = $selectedItemVoucher[1]; // Mendapatkan harga
+
+        $selectedItemMetode = explode('|', $request->metode);
+        $id_metode = $selectedItemMetode[0]; // Mendapatkan ID
+        $biaya_admin = $selectedItemMetode[1]; // Mendapatkan harga
+
         $model = new M_Pesanan;
         $model->id_kategori = $request->id_kategori;
-        $model->id_voucher = $request->id_voucher;
-        $model->id_metode = $request->id_metode;
-        $model->total_harga = 1000;
+        $model->id_voucher = $id_voucher;
+        $model->id_metode = $id_metode;
+        $model->total_harga = $harga_voucher + $biaya_admin;
         $model->email = $request->email;
         $model->waktu_pesanan = Carbon::now()->format('Y-m-d H:i:s');
 
