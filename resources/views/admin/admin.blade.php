@@ -134,7 +134,7 @@ https://templatemo.com/tm-589-lugx-gaming
                     <tr>
                         <td>{{ $noK }}</td>
                         <td>{{ $kategori->nama_kategori }}</td>
-                        <td><img src="assets/imagesdb{{ $kategori->gambar_kategori }}" alt""></td>
+                        <td><img src="/assets/imagesdb/{{ $kategori->gambar_kategori }}"></td>
                         <td><a class="btn btn-sm btn-primary"href="{{ url('voucherKategori/'.$kategori->id) }}">Vouchers</a></td>
                         <td>
                             <a class="btn btn-sm btn-primary"href="{{ url('kategoriEdit/'.$kategori->id.'')}}">Edit</a>
@@ -150,29 +150,6 @@ https://templatemo.com/tm-589-lugx-gaming
             </table>
         </div>
     </div>
-    {{-- <div class="section trending">
-        <div class="container">
-            <h1>Table Voucher</h1>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Kategori</th>
-                        <th>Nominal</th>
-                        <th>Harga</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Kategori</td>
-                        <td>20.000</td>
-                        <td>22.000</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div> --}}
     <div class="section trending">
         <div class="container">
             <h1>Table Metode</h1> <a href="{{url('metode/create')}}">Create</a>

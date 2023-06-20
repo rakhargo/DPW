@@ -86,7 +86,7 @@ https://templatemo.com/tm-589-lugx-gaming
 <div class="container">
     <h1>Create Kategori Voucher Baru</h1>
     <form action="{{ url('kategori') }}" method="POST" enctype="multipart/form-data">
-        @csrf
+        @csrf 
         <div class="form-group">
             <label for="nameInput">Nama</label>
             <input type="text" class="form-control" id="nameInput" placeholder="Enter Name" name="nama_kategori">

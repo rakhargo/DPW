@@ -88,6 +88,7 @@ https://templatemo.com/tm-589-lugx-gaming
     <form action="{{ url('kategori/'.$model->id) }}" method="POST">
         @csrf
         <div class="form-group">
+          <img src="/assets/imagesdb/{{ $model->gambar_kategori }}">
           <input type="hidden" value="PATCH" name="_method">
           <input type="hidden" class="form-control" id="idInput" placeholder="ID kategori" name="id_kategori">
             <label for="nameInput">Nama</label>
@@ -95,7 +96,7 @@ https://templatemo.com/tm-589-lugx-gaming
         </div>
         <div class="form-group">
             <label for="gambarInput">Gambar Kategori</label>
-            <input type="file" class="form-control" id="gambarInput" name="gambar_kategori" value="{{ $model->gambar_kategoti }}">
+            <input type="file" class="form-control" id="gambarInput" name="gambar_kategori">
         </div>
         <br/>
         <button type="submit" class="btn btn-primary">Submit</button>
