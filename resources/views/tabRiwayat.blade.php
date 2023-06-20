@@ -1,4 +1,5 @@
 {{-- @dd($data_condition) --}}
+{{-- @dd($postEmail) --}}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -59,7 +60,6 @@ https://templatemo.com/tm-589-lugx-gaming
                     <ul class="nav">
                       <li><a href="/">Home</a></li>
                       <li><a href="tabVoucher">Our Shop</a></li>
-                      {{-- <li><a href="tabDetails">Product Details</a></li> --}}
                       <li><a href="tabLacak" class="active">Lacak pesanan</a></li>
                       <li><a href="tabAdmin">Admin page</a></li>
                   </ul>   
@@ -88,10 +88,10 @@ https://templatemo.com/tm-589-lugx-gaming
   <div class="contact-page section">
     <div class="container">
       <div class="row">
-        <h5>Pesanan dengan email {{ $data_condition['email'] }}</h5>
+        <h5>Pesanan dengan email {{ $postEmail }}</h5>
         <br><br>
         <div class="col-lg-6 align-self-center">
-          <table>
+          <table class="table">
             <tr>
                 <th>NO</th>
                 <th>Kategori</th>
@@ -103,17 +103,14 @@ https://templatemo.com/tm-589-lugx-gaming
             <?php
             $no = 1;
             ?>
-            @foreach ($data_condition as $item)
+            @foreach ($data_join as $item)
             <tr>
                 <td>{{ $no }}</td>
-                @foreach ($item['id_kategori'] as $kat)
-                <td>{{ $kat }}</td>
-                @endforeach
-                {{-- <td>{{ $item['id_voucher'] }}</td>
-                <td>{{ $item['id_metode'] }}</td>
+                <td>{{ $item['nama_kategori'] }}</td>
+                <td>{{ $item['nominal_voucher'] }}</td>
+                <td>{{ $item['nama_metode'] }}</td>
                 <td>{{ $item['total_harga'] }}</td>
-                <td>{{ $item['waktu_pesanan'] }}</td> --}}
-                {{-- <td>Waktu pesanan</td> --}}
+                <td>{{ $item['waktu_pesanan'] }}</td>
             </tr>
                 
             <?php
