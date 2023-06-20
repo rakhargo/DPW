@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
  
 use Illuminate\Http\Request;
 use App\Models\M_Pesanan;
+use App\Models\M_Voucher;
+use App\Models\M_Metode;
+use App\Models\M_Kategori;
 use Carbon\Carbon;
 
 class C_Pesanan extends Controller
@@ -38,18 +41,19 @@ class C_Pesanan extends Controller
         ->select('t_kategori.id_kategori', 't_kategori.nama_kategori', 't_kategori.gambar_kategori', 't_voucher.id_voucher', 't_voucher.nominal_voucher', 't_voucher.harga_voucher', 't_metode.id_metode', 't_metode.nama_metode', 't_pesanan.total_harga', 't_pesanan.waktu_pesanan')
         ->get();
         return view('tabRiwayat', compact('data_join', 'postEmail'));
+        // return view('tabRiwayat', compact('data_join', 'postEmail'));
     }
-
-    public function store(Request $request)
+    
+    public function confirm(Request $request)
     {
         $selectedItemVoucher = explode('|', $request->voucher);
         $id_voucher = $selectedItemVoucher[0]; // Mendapatkan ID
         $harga_voucher = $selectedItemVoucher[1]; // Mendapatkan harga
-
+        
         $selectedItemMetode = explode('|', $request->metode);
         $id_metode = $selectedItemMetode[0]; // Mendapatkan ID
         $biaya_admin = $selectedItemMetode[1]; // Mendapatkan harga
-
+        
         $model = new M_Pesanan;
         $model->id_kategori = $request->id_kategori;
         $model->id_voucher = $id_voucher;
@@ -57,9 +61,33 @@ class C_Pesanan extends Controller
         $model->total_harga = $harga_voucher + $biaya_admin;
         $model->email = $request->email;
         $model->waktu_pesanan = Carbon::now()->format('Y-m-d H:i:s');
+        
+        $kategori = M_Kategori::where('id_kategori', $request->id_kategori)->first();
+        $metode = M_Metode::where('id_metode', $id_metode)->first();
+        $voucher = M_Voucher::where('id_voucher', $id_voucher)->first();
+        
+        // $model->save();
+        return view('tabConfirmPesanan', compact('model', 'kategori', 'metode', 'voucher'));
+        // return redirect('/');
+    }
+    
+    public function store(Request $request)
+    {
+        $model = new M_Pesanan;
+        $model->id_kategori = $request->kategori;
+        $model->id_voucher = $request->voucher;
+        $model->id_metode = $request->metode;
+        $model->total_harga = $request->total_harga;
+        $model->email = $request->email;
+        $model->waktu_pesanan = Carbon::now()->format('Y-m-d H:i:s');
+        
+        $kategori = M_Kategori::where('id_kategori', $request->kategori)->first();
+        $metode = M_Metode::where('id_metode', $request->metode)->first();
+        $voucher = M_Voucher::where('id_voucher', $request->voucher)->first();
 
         $model->save();
-        return redirect('/');
+        return view('tabInvoice', compact('model', 'kategori', 'metode', 'voucher'));
+        // return redirect('/');
     }
 
     /**
