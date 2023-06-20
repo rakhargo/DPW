@@ -93,7 +93,7 @@ https://templatemo.com/tm-589-lugx-gaming
               </div>
             </div>
 
-            <input type="hidden" name="id_kategori" value="{{ $datas['condition']->id_kategori }}">
+            <input type="hidden" name="id_kategori" value="{{ $datas['condition']->id }}">
 
             <div class="col-lg-6" >
               <h4>1. Pilih nominal Voucher</h4>
@@ -102,7 +102,7 @@ https://templatemo.com/tm-589-lugx-gaming
                 <div class="col-3" >
                   <div class="item">
                     <div class="thumb">
-                      <input type="radio"  name="voucher" value="{{ $datajoin->id_voucher . '|' . $datajoin->harga_voucher }}">
+                      <input type="radio"  name="voucher" value="{{ $datajoin->id . '|' . $datajoin->harga_voucher }}">
                       {{-- <input type="hidden" name="harga_voucher" value="{{ $datajoin->harga_voucher }}"> --}}
                       {{-- <a href=""> --}}
                         <img src="/assets/imagesdb/{{ $datajoin->gambar_kategori }}" alt="">
@@ -122,7 +122,7 @@ https://templatemo.com/tm-589-lugx-gaming
                   <div class="col-3" >
                     <div class="item">
                       <div class="thumb">
-                        <input type="radio" name="metode" value="{{ $datametode->id_metode . '|' . $datametode->biaya_administrasi }}">
+                        <input type="radio" name="metode" value="{{ $datametode->id . '|' . $datametode->biaya_administrasi }}">
                         {{-- <input type="hidden" name="biaya_admin" value="{{ $datametode->biaya_administrasi }}"> --}}
                         {{-- <a href=""> --}}
                           <img src="/assets/imagesdb/{{ $datametode->gambar_metode }}" alt="">
