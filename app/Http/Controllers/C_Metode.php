@@ -4,8 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\M_Metode;
+use Storage;
 
-class C_Metode extends Controller
+class C_Metode extends Controller 
 {
     /**
      * Display a listing of the resource.
