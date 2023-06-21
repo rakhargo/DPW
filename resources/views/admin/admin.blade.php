@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <title>Lugx Gaming - Admin Page</title> 
+    <title>VENTI - Admin Page</title> 
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -85,7 +85,7 @@ https://templatemo.com/tm-589-lugx-gaming
   </div>
     <div class="section trending">
         <div class="container">
-            <h1>Table Pesanan</h1> <a>Create</a>
+            <h1>Table Pesanan</h1>
             <table class="table">
                 <thead>
                     <tr>
@@ -124,7 +124,7 @@ https://templatemo.com/tm-589-lugx-gaming
                     <tr>
                         <th>ID</th>
                         <th>Kategori</th>
-                        <th>Logo</th>
+                        {{-- <th>Logo</th> --}}
                         <th>Laman Voucher</th>
                         <th colspan="2">Action</th>
                     </tr>
@@ -135,7 +135,7 @@ https://templatemo.com/tm-589-lugx-gaming
                     <tr>
                         <td>{{ $noK }}</td>
                         <td>{{ $kategori->nama_kategori }}</td>
-                        <td><img src="{{ asset('storage/' .$kategori->gambar_kategori) }}"></td>
+                        {{-- <td><img src="{{ asset('storage/' .$kategori->gambar_kategori) }}"></td> --}}
                         <td><a class="btn btn-sm btn-primary"href="{{ url('voucherKategori/'.$kategori->id) }}">Vouchers</a></td>
                         <td>
                             <a class="btn btn-sm btn-primary"href="{{ url('kategoriEdit/'.$kategori->id.'')}}">Edit</a>
@@ -187,8 +187,7 @@ https://templatemo.com/tm-589-lugx-gaming
   <footer>
     <div class="container">
       <div class="col-lg-12">
-        <p>Copyright © 2048 LUGX Gaming Company. All rights reserved. &nbsp;&nbsp; <a rel="nofollow" href="https://templatemo.com" target="_blank">Design: TemplateMo</a></p>
-      </div>
+        <p>Coded by: Jason Suryoatmojo & Rakha Hariadi</p></div>
     </div>
   </footer>
 

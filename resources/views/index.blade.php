@@ -124,7 +124,7 @@ https://templatemo.com/tm-589-lugx-gaming
               <div class="image">
                 <img src="assets/images/dollar.png" alt="" style="max-width: 44px;">
               </div>
-              <h4>TERMURAH</h4>
+              <h4>Termurah</h4>
             </div>
           </a>
         </div>
@@ -406,7 +406,7 @@ https://templatemo.com/tm-589-lugx-gaming
   <footer>
     <div class="container">
       <div class="col-lg-12">
-        <p>Copyright © 2048 LUGX Gaming Company. All rights reserved. &nbsp;&nbsp; <a rel="nofollow" href="https://templatemo.com" target="_blank">Design: TemplateMo</a></p>
+        <p>Coded by: Jason Suryoatmojo & Rakha Hariadi</p>
       </div>
     </div>
   </footer>

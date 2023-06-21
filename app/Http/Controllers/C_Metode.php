@@ -37,7 +37,7 @@ class C_Metode extends Controller
         $model = new M_Metode;
         $model->nama_metode = $request->nama_metode;
         $model->biaya_administrasi = $request->biaya_administrasi;
-        $model->gambar_metode = $request->gambar_metode;
+        $model->gambar_metode = $request->file('gambar_metode')->store('gambar_metode');
 
         $model->save();
         return redirect('/tabAdmin');
@@ -69,7 +69,10 @@ class C_Metode extends Controller
         $model = M_Metode::find($id);
         $model->nama_metode = $request->nama_metode;
         $model->biaya_administrasi = $request->biaya_administrasi;
-        $model->gambar_metode = $request->gambar_metode;
+        Storage::delete($model->gambar_metode);
+
+        // $model->gambar_metode = $request->gambar_metode;
+        $model->gambar_metode = $request->file('gambar_metode')->store('gambar_metode');
 
         $model->save();
         return redirect('/tabAdmin');
@@ -81,6 +84,8 @@ class C_Metode extends Controller
     public function destroy(string $id)
     {
         $model = M_Metode::find($id);
+        Storage::delete($model->gambar_metode);
+
         $model->delete();
         return redirect('/tabAdmin');
 

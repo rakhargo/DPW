@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <title>Lugx Gaming - Product Detail</title>
+    <title>VENTI - Beli Voucher</title>
 
     <!-- Bootstrap core CSS -->
     <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -58,7 +58,7 @@ https://templatemo.com/tm-589-lugx-gaming
                       <li><a href="/">Home</a></li>
                       {{-- <li><a href="tabVoucher">Our Shop</a></li> --}}
                       <li><a href="tabLacak">Lacak pesanan</a></li>
-                      <li><a href="loginadm">Admin page</a></li>
+                      <li><a href="{{url('loginadm')}}">Admin page</a></li>
                   </ul>   
                     <a class='menu-trigger'>
                         <span>Menu</span>
@@ -75,8 +75,7 @@ https://templatemo.com/tm-589-lugx-gaming
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <h3>Modern Warfare® II</h3>
-          <span class="breadcrumb"><a href="#">Home</a>  >  <a href="#">Shop</a>  >  Assasin Creed</span>
+          <h3>Beli Voucher</h3>
         </div>
       </div>
     </div>
@@ -89,7 +88,7 @@ https://templatemo.com/tm-589-lugx-gaming
         <div class="row">
             <div class="col-lg-6">
               <div class="left-image">
-                <img src="/assets/imagesdb/{{ $datas['condition']->gambar_kategori }}" alt="">
+                <img src="{{ asset('storage/' .$datas['condition']->gambar_kategori) }}" alt="">
               </div>
             </div>
 
@@ -102,10 +101,10 @@ https://templatemo.com/tm-589-lugx-gaming
                 <div class="col-3" >
                   <div class="item">
                     <div class="thumb">
-                      <input type="radio"  name="voucher" value="{{ $datajoin->id . '|' . $datajoin->harga_voucher }}">
+                      <input type="radio" name="voucher" value="{{ $datajoin->id . '|' . $datajoin->harga_voucher }}">
                       {{-- <input type="hidden" name="harga_voucher" value="{{ $datajoin->harga_voucher }}"> --}}
                       {{-- <a href=""> --}}
-                        <img src="/assets/imagesdb/{{ $datajoin->gambar_kategori }}" alt="">
+                        <img src="{{ asset('storage/'.$datajoin->gambar_kategori)  }}" alt="">
                         {{-- </a> --}}
                       </div>
                       <h6>{{ $datajoin->nominal_voucher }}</h6>
@@ -125,7 +124,7 @@ https://templatemo.com/tm-589-lugx-gaming
                         <input type="radio" name="metode" value="{{ $datametode->id . '|' . $datametode->biaya_administrasi }}">
                         {{-- <input type="hidden" name="biaya_admin" value="{{ $datametode->biaya_administrasi }}"> --}}
                         {{-- <a href=""> --}}
-                          <img src="/assets/imagesdb/{{ $datametode->gambar_metode }}" alt="">
+                          <img src="{{ asset('storage/'.$datametode->gambar_metode)  }}" alt="">
                           {{-- </a> --}}
                         </div>
                         <h6>{{ $datametode->nama_metode }}</h6>
@@ -273,8 +272,7 @@ https://templatemo.com/tm-589-lugx-gaming
   <footer>
     <div class="container">
       <div class="col-lg-12">
-        <p>Copyright © 2048 LUGX Gaming Company. All rights reserved. &nbsp;&nbsp; <a rel="nofollow" href="https://templatemo.com" target="_blank">Design: TemplateMo</a></p>
-      </div>
+        <p>Coded by: Jason Suryoatmojo & Rakha Hariadi</p></div>
     </div>
   </footer>
 

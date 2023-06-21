@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <title>Lugx Gaming - Admin Page</title> 
+    <title>VENTI - Kategori Edit</title> 
 
     <!-- Bootstrap core CSS -->
     <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -88,16 +88,18 @@ https://templatemo.com/tm-589-lugx-gaming
     <h1>Edit Kategori Voucher</h1>
     <form action="{{ url('kategori/'.$model->id) }}" method="POST" enctype="multipart/form-data">
         @csrf
+        <div class="thumb">
+        <img src="{{ asset('storage/'.$model->gambar_kategori) }}" style="aspect-ratio: 1 / 1; width: 200px">
+        </div>  
         <div class="form-group">
-          <img src="/assets/imagesdb/{{ $model->gambar_kategori }}">
           <input type="hidden" value="PATCH" name="_method">
           <input type="hidden" class="form-control" id="idInput" placeholder="ID kategori" name="id_kategori">
             <label for="nameInput">Nama</label>
-            <input type="text" class="form-control" id="nameInput" name="nama_kategori" value="{{ $model->nama_kategori }}">
+            <input type="text" class="form-control" id="nameInput" name="nama_kategori" value="{{ $model->nama_kategori }}" required>
         </div>
         <div class="form-group">
             <label for="gambarInput">Gambar Kategori</label>
-            <input type="file" class="form-control" id="gambarInput" name="gambar_kategori">
+            <input type="file" class="form-control" id="gambarInput" name="gambar_kategori" required>
         </div>
         <br/>
         <button type="submit" class="btn btn-primary">Submit</button>
@@ -106,8 +108,7 @@ https://templatemo.com/tm-589-lugx-gaming
   <footer>
     <div class="container">
       <div class="col-lg-12">
-        <p>Copyright © 2048 LUGX Gaming Company. All rights reserved. &nbsp;&nbsp; <a rel="nofollow" href="https://templatemo.com" target="_blank">Design: TemplateMo</a></p>
-      </div>
+        <p>Coded by: Jason Suryoatmojo & Rakha Hariadi</p></div>
     </div>
   </footer>
 

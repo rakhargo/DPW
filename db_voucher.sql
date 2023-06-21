@@ -1,7 +1,7 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : test
+Source Server         : SQL Connection
 Source Server Version : 50505
 Source Host           : localhost:3306
 Source Database       : db_voucher
@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2023-06-20 10:19:51
+Date: 2023-06-21 13:14:28
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -101,45 +101,48 @@ CREATE TABLE `personal_access_tokens` (
 -- ----------------------------
 DROP TABLE IF EXISTS `t_kategori`;
 CREATE TABLE `t_kategori` (
-  `id_kategori` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `nama_kategori` varchar(255) NOT NULL,
   `gambar_kategori` varchar(255) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id_kategori`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ----------------------------
 -- Records of t_kategori
 -- ----------------------------
-INSERT INTO `t_kategori` VALUES ('1', 'Steam Wallet', 'steam.png', '2023-06-18 10:21:28', '2023-06-18 10:21:28');
+INSERT INTO `t_kategori` VALUES ('1', 'Steam Wallet', 'gambar_kategori/VLBttiYXTQhHrz78pk1hEMsJRFcfYL4tjbOtUgtv.png', '2023-06-21 05:44:07', '2023-06-21 05:44:07');
+INSERT INTO `t_kategori` VALUES ('2', 'Google Pay', 'gambar_kategori/KxdOrg4bPW9uE1p9mjfSAOxkeHFZlPB4T3viDt4z.png', '2023-06-21 05:44:24', '2023-06-21 05:44:24');
+INSERT INTO `t_kategori` VALUES ('3', 'Xbox', 'gambar_kategori/1AvAlMHyF3VPW96YJOIv9BL1U8TSM6OWhqiVTpPS.png', '2023-06-21 05:44:43', '2023-06-21 05:44:43');
+INSERT INTO `t_kategori` VALUES ('4', 'Playstation Points', 'gambar_kategori/K5b6EuyVuuvDQ5OGSR9LnOMRjjHIAV37mizxHjPV.png', '2023-06-21 05:44:59', '2023-06-21 05:44:59');
+INSERT INTO `t_kategori` VALUES ('5', 'Nintendo e-shop', 'gambar_kategori/iBv0Mxx1PuWWf5Geid0As4ytRUmdan1vgPQQbWI3.png', '2023-06-21 05:45:59', '2023-06-21 05:45:59');
 
 -- ----------------------------
 -- Table structure for `t_metode`
 -- ----------------------------
 DROP TABLE IF EXISTS `t_metode`;
 CREATE TABLE `t_metode` (
-  `id_metode` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `nama_metode` varchar(255) NOT NULL,
   `biaya_administrasi` int(11) NOT NULL,
   `gambar_metode` varchar(255) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id_metode`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ----------------------------
 -- Records of t_metode
 -- ----------------------------
-INSERT INTO `t_metode` VALUES ('1', 'QRIS', '1000', 'qris.jpg', '2023-06-18 10:21:28', '2023-06-18 10:21:28');
-INSERT INTO `t_metode` VALUES ('2', 'Transfer Bank', '2500', 'bank.jpg', null, null);
+INSERT INTO `t_metode` VALUES ('1', 'QRIS', '2500', 'gambar_metode/AeH74BuT2ku43335ng3NSfDZS6A6YIkin9b0039Q.jpg', '2023-06-21 05:46:36', '2023-06-21 05:46:36');
 
 -- ----------------------------
 -- Table structure for `t_pesanan`
 -- ----------------------------
 DROP TABLE IF EXISTS `t_pesanan`;
 CREATE TABLE `t_pesanan` (
-  `id_pesanan` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `id_kategori` int(11) NOT NULL,
   `id_voucher` int(11) NOT NULL,
   `id_metode` int(11) NOT NULL,
@@ -148,33 +151,32 @@ CREATE TABLE `t_pesanan` (
   `waktu_pesanan` datetime NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id_pesanan`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ----------------------------
 -- Records of t_pesanan
 -- ----------------------------
-INSERT INTO `t_pesanan` VALUES ('1', '1', '2', '1', '46000', 'dhifiargo2004@gmail.com', '2023-06-19 09:43:47', '2023-06-19 09:43:47', '2023-06-19 09:43:47');
-INSERT INTO `t_pesanan` VALUES ('2', '1', '4', '2', '92500', 'dhifiargo2004@gmail.com', '2023-06-19 09:45:28', '2023-06-19 09:45:28', '2023-06-19 09:45:28');
+INSERT INTO `t_pesanan` VALUES ('1', '1', '2', '1', '47500', 'heisenbruh@gmail.com', '2023-06-21 06:13:42', '2023-06-21 06:13:42', '2023-06-21 06:13:42');
 
 -- ----------------------------
 -- Table structure for `t_voucher`
 -- ----------------------------
 DROP TABLE IF EXISTS `t_voucher`;
 CREATE TABLE `t_voucher` (
-  `id_voucher` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `id_kategori` int(11) NOT NULL,
   `nominal_voucher` varchar(255) NOT NULL,
   `harga_voucher` int(11) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id_voucher`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ----------------------------
 -- Records of t_voucher
 -- ----------------------------
-INSERT INTO `t_voucher` VALUES ('1', '1', 'Rp. 12000', '12000', null, null);
+INSERT INTO `t_voucher` VALUES ('1', '1', 'Rp. 12000', '12000', null, '2023-06-20 05:01:34');
 INSERT INTO `t_voucher` VALUES ('2', '1', 'Rp. 45000', '45000', null, null);
 INSERT INTO `t_voucher` VALUES ('3', '1', 'Rp. 60000', '60000', null, null);
 INSERT INTO `t_voucher` VALUES ('4', '1', 'Rp. 90000', '90000', null, null);
@@ -196,8 +198,9 @@ CREATE TABLE `users` (
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `users_email_unique` (`email`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ----------------------------
 -- Records of users
 -- ----------------------------
+INSERT INTO `users` VALUES ('1', 'Admin', 'admin@venti.com', null, '$2y$10$KLFY0br3HrsS6BDBN//i6uy2gM4UtQFNgVvlZtO5IxLm9ZuVK1b42', null, null, null);

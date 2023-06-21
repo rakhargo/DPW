@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <title>Lugx Gaming - Admin Page</title> 
+    <title>VENTI - Metode Create/title> 
 
     <!-- Bootstrap core CSS -->
     <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -90,15 +90,15 @@ https://templatemo.com/tm-589-lugx-gaming
         @csrf
         <div class="form-group">
             <label for="nameInput">Nama</label>
-            <input type="text" class="form-control" id="nameInput" placeholder="Nama Metode" name="nama_metode">
+            <input type="text" class="form-control" id="nameInput" placeholder="Nama Metode" name="nama_metode" required>
         </div>
         <div class="form-group">
             <label for="priceInput">Biaya Administrasi</label>
-            <input type="text" class="form-control" id="priceInput" placeholder="Biaya Administrasi" name="biaya_administrasi">
+            <input type="text" class="form-control" id="priceInput" placeholder="Biaya Administrasi" name="biaya_administrasi" required>
         </div>
         <div class="form-group">
             <label for="pictureInput">Gambar Metode</label>
-            <input type="file" class="form-control" id="pictureInput" name="gambar_metode">
+            <input type="file" class="form-control" id="pictureInput" name="gambar_metode" required>
         </div>
         <br/>
         <button type="submit" class="btn btn-primary">Submit</button>
@@ -107,8 +107,7 @@ https://templatemo.com/tm-589-lugx-gaming
   <footer>
     <div class="container">
       <div class="col-lg-12">
-        <p>Copyright © 2048 LUGX Gaming Company. All rights reserved. &nbsp;&nbsp; <a rel="nofollow" href="https://templatemo.com" target="_blank">Design: TemplateMo</a></p>
-      </div>
+        <p>Coded by: Jason Suryoatmojo & Rakha Hariadi</p></div>
     </div>
   </footer>
 
