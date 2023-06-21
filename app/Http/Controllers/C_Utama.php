@@ -9,6 +9,7 @@ use App\Models\M_Pesanan;
 use App\Models\M_Metode;
 use Storage;
 use File;
+use Auth;
  
 class C_Utama extends Controller
 {
@@ -26,7 +27,12 @@ class C_Utama extends Controller
         $listKategori = M_Kategori::all();
         $listMetode = M_Metode::all();
         $listPesanan = M_Pesanan::all();
-        return view('admin/admin', compact('listKategori','listMetode', 'listPesanan')); // buat return ke index dengan passing parameter
+        if (Auth::check() && Auth::user()->email === 'admin@venti.com') {
+            return view('admin/admin', compact('listKategori','listMetode', 'listPesanan')); // buat return ke index dengan passing parameter
+            
+        } else {
+            return redirect('/');
+        }
     }
 
     public function show_allPesanan(){
