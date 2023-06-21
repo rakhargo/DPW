@@ -86,7 +86,7 @@ https://templatemo.com/tm-589-lugx-gaming
     
 <div class="container">
     <h1>Edit Metode Pembayaran</h1>
-    <form action="{{ url('metode/'.$model->id) }}" method="POST">
+    <form action="{{ url('metode/'.$model->id) }}" method="POST" enctype="multipart/form-data">
         @csrf
         <img src="{{ asset('storage/'.$model->gambar_metode) }}" style="aspect-ratio: 1 / 1; width: 200px">
         <div class="form-group">

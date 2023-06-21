@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\M_Metode;
-use Storage;
+use Storage;    
+use File;
 
 class C_Metode extends Controller 
 {
