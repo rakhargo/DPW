@@ -136,7 +136,7 @@
                 </div>
                 <br><br>
                 
-                <button type="submit" id="submitBtn" class="submit-btn"><i class="fa fa-shopping-bag"></i> ADD TO CART</button>
+                <button type="submit" id="submitBtn" class="submit-btn"><i class="fa fa-shopping-bag"></i> BELI SEKARANG </button>
             </div>            
 
             <div class="col-lg-12">
