@@ -9,7 +9,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
+    <link rel="icon" type="image/x-icon" href="assets/images/logoonly.png">
     <title>VENTI - Index</title>
 
     <!-- Bootstrap core CSS -->
@@ -126,7 +126,7 @@
   <footer>
     <div class="container">
       <div class="col-lg-12">
-        <p>Coded by: Jason Suryoatmojo & Rakha Hariadi</p>
+        <p>Coded by: <a href="mailto:@upi.edu" style="color: blue">Jason Suryoatmojo</a> & <a href="mailto:rakhadh@upi.edu" style="color: blue">Rakha Dhifiargo</a> <br>Kontak kami lewat tulisan biru diatas</p>
       </div>
     </div>
   </footer>

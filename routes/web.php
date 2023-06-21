@@ -31,45 +31,24 @@ Route::get('/kategoriEdit/{id}', [C_Utama::class, 'edit']);
 Route::get('/voucherKategori/{id}', [C_Voucher::class, 'voucherKategori']);
 Route::get('/voucherEdit/{id}/{idkat}', [C_Voucher::class, 'edit']);
 
-// Route::get('/tabRiwayat', [C_Utama::class, 'getId']);
 Route::get('/tabRiwayat', [C_Pesanan::class, 'getEmail']);
 Route::post('/tabConfirm', [C_Pesanan::class, 'confirm']);
 Route::post('/tabInvoice', [C_Pesanan::class, 'invoice']);
-// Route::get('/', function () {
-    //     // Route::resource('kategori', C_Utama::class);
-    //     // $datas = ;
-// Route::get('/tabConfirm', function () {
-//     return view('tabConfirmPesanan');
-// });
-
-//     // return view('index', compact('datas'));
-//     return $datas;
-// });
 
 Route::resource('/kategori', C_Utama::class);
 Route::resource('/pesanan', C_Pesanan::class);
 Route::resource('/metode', C_Metode::class);
 Route::resource('/voucher', C_Voucher::class);
 
-// Route get => pegawai/{id}/edit => edit
 Route::get('/tabVoucher', function () {
     return view('tabVoucher');
 });
 Route::get('/voucherCreate/{id}', [C_Voucher::class, 'create']);
 
-// Route::get('/tabDetails/{id}', function () {
-//     $id = $_GET['id'];
-//     return view('tabDetails', ['id' => $id]); 
-// });
 
 Route::get('/tabLacak', function () {
     return view('tabLacak');
 });
-
-
-// Route::get('/tabAdmin', function () {
-//     return view('admin/admin');
-// });
 
 Route::get('/images', function () {
     return assets('admin/admin');
@@ -84,6 +63,3 @@ Route::get('/metodeCreate', function () {
 Route::get('/loginadm', [C_Session::class, 'index']);
 Route::get('/loginadm/logout', [C_Session::class, 'logout']);
 Route::post('/loginadm/login', [C_Session::class, 'login']);
-// Route::get('/metodeEdit/{id}', function () {
-//     return view('admin/metodeEdit');
-// });

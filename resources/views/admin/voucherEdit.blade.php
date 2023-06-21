@@ -30,18 +30,6 @@ https://templatemo.com/tm-589-lugx-gaming
 
 <body>
 
-  <!-- ***** Preloader Start ***** -->
-  {{-- <div id="js-preloader" class="js-preloader">
-    <div class="preloader-inner">
-      <span class="dot"></span>
-      <div class="dots">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-  </div> --}}
-  <!-- ***** Preloader End ***** -->
 
   <!-- ***** Header Area Start ***** -->
   <header class="header-area header-sticky">
@@ -106,12 +94,13 @@ https://templatemo.com/tm-589-lugx-gaming
         <button type="submit" class="btn btn-primary">Update</button>
     </form>
 </div>
-  <footer>
-    <div class="container">
-      <div class="col-lg-12">
-        <p>Coded by: Jason Suryoatmojo & Rakha Hariadi</p></div>
+<footer>
+  <div class="container">
+    <div class="col-lg-12">
+      <p>Coded by: <a href="mailto:@upi.edu" style="color: blue">Jason Suryoatmojo</a> & <a href="mailto:rakhadh@upi.edu" style="color: blue">Rakha Dhifiargo</a> <br>Kontak kami lewat tulisan biru diatas</p>
     </div>
-  </footer>
+  </div>
+</footer>
 
   <!-- Scripts -->
   <!-- Bootstrap core JavaScript -->

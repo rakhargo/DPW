@@ -26,7 +26,11 @@ class C_Utama extends Controller
     {
         $listKategori = M_Kategori::all();
         $listMetode = M_Metode::all();
-        $listPesanan = M_Pesanan::all();
+        // $listPesanan = M_Pesanan::all();
+        $listPesanan = M_Pesanan::join('t_voucher', 't_pesanan.id_voucher', '=', 't_voucher.id')
+        ->join('t_kategori', 't_pesanan.id_kategori', '=', 't_kategori.id')
+        ->join('t_metode', 't_pesanan.id_metode', '=', 't_metode.id')
+        ->get();
         if (Auth::check() && Auth::user()->email === 'admin@venti.com') {
             return view('admin/admin', compact('listKategori','listMetode', 'listPesanan')); // buat return ke index dengan passing parameter
             
@@ -35,10 +39,10 @@ class C_Utama extends Controller
         }
     }
 
-    public function show_allPesanan(){
+    // public function show_allPesanan(){
 
 
-    }
+    // }
     public function getId($id)
     {
         $data_join = M_Kategori::join('t_voucher', 't_kategori.id', '=', 't_voucher.id_kategori')

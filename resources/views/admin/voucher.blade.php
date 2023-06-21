@@ -118,12 +118,13 @@ https://templatemo.com/tm-589-lugx-gaming
             </table>
         </div>
     </div>
-  <footer>
-    <div class="container">
-      <div class="col-lg-12">
-        <p>Coded by: Jason Suryoatmojo & Rakha Hariadi</p></div>
-    </div>
-  </footer>
+    <footer>
+      <div class="container">
+        <div class="col-lg-12">
+          <p>Coded by: <a href="mailto:@upi.edu" style="color: blue">Jason Suryoatmojo</a> & <a href="mailto:rakhadh@upi.edu" style="color: blue">Rakha Dhifiargo</a> <br>Kontak kami lewat tulisan biru diatas</p>
+        </div>
+      </div>
+    </footer>
 
   <!-- Scripts -->
   <!-- Bootstrap core JavaScript -->

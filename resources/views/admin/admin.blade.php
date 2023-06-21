@@ -83,17 +83,90 @@ https://templatemo.com/tm-589-lugx-gaming
       </div>
     </div>
   </div>
+  <div class="section trending">
+    <div class="container">
+        <h1>Table Kategori</h1> 
+        <a href="{{url('kategori/create')}}" class="create">Create</a>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>NO</th>
+                    <th>Kategori</th>
+                    <th>Logo</th>
+                    <th>Laman Voucher</th>
+                    <th colspan="2">Action</th>
+                </tr>
+            </thead>
+            <?php $noK = 1; ?>
+            <tbody>
+                @foreach ($listKategori as $kategori)
+                <tr>
+                    <td style="width: 5%;">{{ $noK }}</td>
+                    <td style="width: 20%;">{{ $kategori->nama_kategori }}</td>
+                    <td style="width: 10%;"><img src="{{ asset('storage/' .$kategori->gambar_kategori) }}"></td>
+                    <td style="width: 20%;"><a class="btn btn-sm btn-primary"href="{{ url('voucherKategori/'.$kategori->id) }}">Vouchers</a></td>
+                    <td style="width: 20%;">
+                        <a class="btn btn-sm btn-primary" href="{{ url('kategoriEdit/'.$kategori->id.'')}}">Edit</a>
+                        <form action="{{ url('kategori/'.$kategori->id) }}" method="POST">
+                            @csrf <input type="hidden" name="_method" value="DELETE">
+                            <button class="btn btn-sm btn-danger" type="submit" onclick="return confirm('Yakin ingin menghapus data ini?');">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+                <?php $noK++; ?>
+                @endforeach
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="section trending">
+    <div class="container">
+        <h1>Table Metode</h1> 
+        <a href="{{url('metode/create')}}" class="create">Create</a>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th style="width: 5%;">NO</th>
+                    <th style="width: 20%;">Metode</th>
+                    <th style="width: 10%;">Gambar</th>
+                    <th style="width: 20%;">Biaya Admin</th>
+                    <th style="width: 20%;">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php $noM = 1; ?>
+                @foreach ($listMetode as $metode)
+                <tr>
+                    <td>{{ $noM }}</td>
+                    <td>{{ $metode->nama_metode }}</td>
+                    <td style="width: 10%;"><img src="{{ asset('storage/' .$metode->gambar_metode) }}"></td>
+                    <td>RP. {{ number_format($metode->biaya_administrasi,0,"",".") }}</td>
+                    <td>
+                        <a class="btn btn-sm btn-primary" href="{{ url('metodeEdit/'.$metode->id.'')}}">Edit</a>
+                        <form action="{{ url('metode/'.$metode->id) }}" method="POST">
+                            @csrf <input type="hidden" name="_method" value="DELETE" >
+                        <button class="btn btn-sm btn-danger" type="submit" onclick="return confirm('Yakin ingin menghapus data ini?');">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+                <?php $noM++; ?>
+                @endforeach
+            </tbody>
+        </table>
+    </div>
+</div>
+
     <div class="section trending">
         <div class="container">
             <h1>Table Pesanan</h1>
             <table class="table">
                 <thead>
                     <tr>
-                        <th>ID</th>
+                        <th>NO</th>
                         <th>Kategori</th>
-                        <th>Voucher</th>
+                        <th>Nominal</th>
                         <th>Metode</th>
-                        <th>Harga Total</th>
+                        <th>Total Harga</th>
                         <th>Email Pelanggan</th>
                         <th>Waktu Pesanan</th>
                     </tr>
@@ -103,10 +176,10 @@ https://templatemo.com/tm-589-lugx-gaming
                     @foreach ($listPesanan as $pesanan)
                     <tr>
                         <td>{{ $noP }}</td>
-                        <td>{{ $pesanan->id_kategori }}</td>
-                        <td>{{ $pesanan->id_voucher }}</td>
-                        <td>{{ $pesanan->id_metode }}</td>
-                        <td>{{ $pesanan->total_harga }}</td>
+                        <td>{{ $pesanan->nama_kategori }}</td>
+                        <td>{{ $pesanan->nominal_voucher }}</td>
+                        <td>{{ $pesanan->nama_metode }}</td>
+                        <td>RP. {{ number_format($pesanan->total_harga, 0, "", ".") }}</td>
                         <td>{{ $pesanan->email }}</td>
                         <td>{{ $pesanan->waktu_pesanan }}</td>
                     </tr>
@@ -116,82 +189,14 @@ https://templatemo.com/tm-589-lugx-gaming
             </table>
         </div>
     </div>
-    <div class="section trending">
+    
+    <footer>
         <div class="container">
-            <h1>Table Kategori</h1> <a href="{{url('kategori/create')}}">Create</a>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Kategori</th>
-                        <th>Logo</th>
-                        <th>Laman Voucher</th>
-                        <th colspan="2">Action</th>
-                    </tr>
-                </thead>
-                <?php $noK = 1; ?>
-                <tbody>
-                    @foreach ($listKategori as $kategori)
-                    <tr>
-                        <td>{{ $noK }}</td>
-                        <td style="width: 20%;">{{ $kategori->nama_kategori }}</td>
-                        <td style="width: 10%;"><img src="{{ asset('storage/' .$kategori->gambar_kategori) }}"></td>
-                        <td style="width: 20%;"><a class="btn btn-sm btn-primary"href="{{ url('voucherKategori/'.$kategori->id) }}">Vouchers</a></td>
-                        <td>
-                            <a class="btn btn-sm btn-primary"href="{{ url('kategoriEdit/'.$kategori->id.'')}}">Edit</a>
-                            <form action="{{ url('kategori/'.$kategori->id) }}" method="POST">
-                                @csrf <input type="hidden" name="_method" value="DELETE">
-                                <button class="btn btn-sm btn-danger" type="submit">Delete</button>
-                            </form>
-                        </td>
-                    </tr>
-                    <?php $noK++; ?>
-                    @endforeach
-                </tbody>
-            </table>
+          <div class="col-lg-12">
+            <p>Coded by: <a href="mailto:@upi.edu" style="color: blue">Jason Suryoatmojo</a> & <a href="mailto:rakhadh@upi.edu" style="color: blue">Rakha Dhifiargo</a> <br>Kontak kami lewat tulisan biru diatas</p>
+          </div>
         </div>
-    </div>
-    <div class="section trending">
-        <div class="container">
-            <h1>Table Metode</h1> <a href="{{url('metode/create')}}">Create</a>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Metode</th>
-                        <th>Gambar</th>
-                        <th>Biaya Admin</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php $noM = 1; ?>
-                    @foreach ($listMetode as $metode)
-                    <tr>
-                        <td>{{ $noM }}</td>
-                        <td>{{ $metode->nama_metode }}</td>
-                        <td style="width: 20%;"><img src="{{ asset('storage/' .$metode->gambar_metode) }}"></td>
-                        <td>{{ $metode->biaya_administrasi }}</td>
-                        <td>
-                            <a class="btn btn-sm btn-primary" href="{{ url('metodeEdit/'.$metode->id.'')}}">Edit</a>
-                            <form action="{{ url('metode/'.$metode->id) }}" method="POST">
-                                @csrf <input type="hidden" name="_method" value="DELETE">
-                            <button class="btn btn-sm btn-danger" type="submit">Delete</button>
-                            </form>
-                        </td>
-                    </tr>
-                    <?php $noM++; ?>
-                    @endforeach
-                </tbody>
-            </table>
-        </div>
-    </div>
-  <footer>
-    <div class="container">
-      <div class="col-lg-12">
-        <p>Coded by: Jason Suryoatmojo & Rakha Hariadi</p></div>
-    </div>
-  </footer>
+      </footer>
 
   <!-- Scripts -->
   <!-- Bootstrap core JavaScript -->

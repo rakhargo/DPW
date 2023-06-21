@@ -1,5 +1,4 @@
-{{-- @dd($data_condition) --}}
-{{-- @dd($postEmail) --}}
+{{-- @dd($data_join) --}}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,7 +7,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
+    <link rel="icon" type="image/x-icon" href="assets/images/logoonly.png">
     <title>VENTI - Riwayat</title>
 
     <!-- Bootstrap core CSS -->
@@ -32,19 +31,6 @@ https://templatemo.com/tm-589-lugx-gaming
 
 <body>
 
-  <!-- ***** Preloader Start ***** -->
-  {{-- <div id="js-preloader" class="js-preloader">
-    <div class="preloader-inner">
-      <span class="dot"></span>
-      <div class="dots">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-  </div> --}}
-  <!-- ***** Preloader End ***** -->
-
   <!-- ***** Header Area Start ***** -->
   <header class="header-area header-sticky">
     <div class="container">
@@ -59,7 +45,6 @@ https://templatemo.com/tm-589-lugx-gaming
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
                       <li><a href="/">Home</a></li>
-                      {{-- <li><a href="tabVoucher">Our Shop</a></li> --}}
                       <li><a href="tabLacak" class="active">Lacak pesanan</a></li>
                       <li><a href="tabAdmin">Admin page</a></li>
                   </ul>   
@@ -85,20 +70,19 @@ https://templatemo.com/tm-589-lugx-gaming
     </div>
   </div>
 
-  <div class="contact-page section">
+  <div class="contact-page section" style="text-align: center">
     <div class="container">
-      <div class="row">
         <h5>Pesanan dengan email {{ $postEmail }}</h5>
         <br><br>
-        <div class="col-lg-6 align-self-center">
           <table class="table">
             <tr>
-                <th>NO</th>
-                <th>Kategori</th>
-                <th>Nominal Voucher</th>
-                <th>Metode pembayaran</th>
-                <th>Total Harga</th>
-                <th>Waktu pesanan</th>
+                <th style="background-color: #383838; border: solid 1px #222222; color: #fff;">NO</th>
+                <th style="background-color: #383838; border: solid 1px #222222; color: #fff;">Nomor Pesanan</th>
+                <th style="background-color: #383838; border: solid 1px #222222; color: #fff;">Kategori</th>
+                <th style="background-color: #383838; border: solid 1px #222222; color: #fff;">Nominal Voucher</th>
+                <th style="background-color: #383838; border: solid 1px #222222; color: #fff;">Metode pembayaran</th>
+                <th style="background-color: #383838; border: solid 1px #222222; color: #fff;">Total Harga</th>
+                <th style="background-color: #383838; border: solid 1px #222222; color: #fff;">Waktu pesanan</th>
             </tr>
             <?php
             $no = 1;
@@ -106,6 +90,7 @@ https://templatemo.com/tm-589-lugx-gaming
             @foreach ($data_join as $item)
             <tr>
                 <td>{{ $no }}</td>
+                <td>INV-{{ $item['id'] }}</td>
                 <td>{{ $item['nama_kategori'] }}</td>
                 <td>{{ $item['nominal_voucher'] }}</td>
                 <td>{{ $item['nama_metode'] }}</td>
@@ -118,15 +103,14 @@ https://templatemo.com/tm-589-lugx-gaming
             ?>
             @endforeach
           </table>
-        </div>
-      </div>
     </div>
   </div>  
 
   <footer>
     <div class="container">
       <div class="col-lg-12">
-        <p>Coded by: Jason Suryoatmojo & Rakha Hariadi</p></div>
+        <p>Coded by: <a href="mailto:@upi.edu" style="color: blue">Jason Suryoatmojo</a> & <a href="mailto:rakhadh@upi.edu" style="color: blue">Rakha Dhifiargo</a> <br>Kontak kami lewat tulisan biru diatas</p>
+      </div>
     </div>
   </footer>
 

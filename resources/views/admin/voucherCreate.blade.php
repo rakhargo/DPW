@@ -104,12 +104,13 @@ https://templatemo.com/tm-589-lugx-gaming
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 </div>
-  <footer>
-    <div class="container">
-      <div class="col-lg-12">
-        <p>Coded by: Jason Suryoatmojo & Rakha Hariadi</p></div>
+<footer>
+  <div class="container">
+    <div class="col-lg-12">
+      <p>Coded by: <a href="mailto:@upi.edu" style="color: blue">Jason Suryoatmojo</a> & <a href="mailto:rakhadh@upi.edu" style="color: blue">Rakha Dhifiargo</a> <br>Kontak kami lewat tulisan biru diatas</p>
     </div>
-  </footer>
+  </div>
+</footer>
 
   <!-- Scripts -->
   <!-- Bootstrap core JavaScript -->

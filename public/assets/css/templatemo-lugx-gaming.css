@@ -26,6 +26,7 @@ font & reset css
 --------------------------------------------- 
 */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
 /* 
 ---------------------------------------------
 reset
@@ -133,7 +134,7 @@ body {
 }
 
 .section {
-  margin-top: 120px;
+  margin-top: 100px;
 }
 
 .section-heading {
@@ -180,6 +181,7 @@ body {
 }
 
 #orderForm button {
+  margin-left: 20px;
   display: inline-block;
   height: 50px;
   line-height: 50px;
@@ -1072,12 +1074,12 @@ Categories Style
   transition: 0.3s;
 }
 
- .item .thumb:hover {
+ /* .item .thumb:hover {
   /* position: relative;
   border-radius: 25px;
   overflow: hidden; */
   /* filter: blur(3px); */
-}
+/* } */
 
  .item h4 {
   font-size: 17px;
@@ -1196,7 +1198,7 @@ footer {
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url(../images/footerr.png);
-  min-height: 70px;
+  min-height: 100px;
   border-radius: 150px 150px 0px 0px;
 }
 
@@ -1634,7 +1636,29 @@ input[type=radio]{
   margin-bottom: 15px;
 }
 
+.contact-page button, .contact-page a {
+  display: inline-block;
+  height: 50px;
+  line-height: 50px;
+  background-color: #ee626b;
+  color: #fff;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 0px 25px;
+  border: none;
+  border-radius: 25px;
+  transition: all .3s;
+  /* text-align: rigth; */
+}
 
+.contact-page button i, .contact-page a i {
+  margin-right: 5px;
+}
+
+.contact-page button:hover, .contact-page a:hover {
+  background-color: #0071f8;
+}
 
 /* 
 ---------------------------------------------
@@ -1800,3 +1824,38 @@ body {
 .nama_produk{
   color: black;
 }
+
+.table {
+  border: solid 1px #383838;
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  margin: 10px auto 10px auto;
+  text-align: center;
+}
+.table thead th {
+    background-color: #383838;
+    border: solid 1px #222222;
+    color: white;
+    padding: 10px;
+    /* text-align: left; */
+    text-decoration: none;
+}
+.table tbody td {
+    border: solid 1px #222222;
+    color: #333;
+    padding: 10px;
+    text-shadow: 1px 1px 1px #fff;
+}
+
+.create {
+  background-color: #ee626b;
+  border-radius: 5px;
+  color: #fff;
+  transition: 0.3s;
+  padding: 5px;
+}
+
+/* .create:hover {
+  background-color: #383838;
+} */
