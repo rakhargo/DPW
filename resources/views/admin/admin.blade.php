@@ -124,7 +124,7 @@ https://templatemo.com/tm-589-lugx-gaming
                     <tr>
                         <th>ID</th>
                         <th>Kategori</th>
-                        {{-- <th>Logo</th> --}}
+                        <th>Logo</th>
                         <th>Laman Voucher</th>
                         <th colspan="2">Action</th>
                     </tr>
@@ -134,14 +134,14 @@ https://templatemo.com/tm-589-lugx-gaming
                     @foreach ($listKategori as $kategori)
                     <tr>
                         <td>{{ $noK }}</td>
-                        <td>{{ $kategori->nama_kategori }}</td>
-                        {{-- <td><img src="{{ asset('storage/' .$kategori->gambar_kategori) }}"></td> --}}
-                        <td><a class="btn btn-sm btn-primary"href="{{ url('voucherKategori/'.$kategori->id) }}">Vouchers</a></td>
+                        <td style="width: 20%;">{{ $kategori->nama_kategori }}</td>
+                        <td style="width: 10%;"><img src="{{ asset('storage/' .$kategori->gambar_kategori) }}"></td>
+                        <td style="width: 20%;"><a class="btn btn-sm btn-primary"href="{{ url('voucherKategori/'.$kategori->id) }}">Vouchers</a></td>
                         <td>
                             <a class="btn btn-sm btn-primary"href="{{ url('kategoriEdit/'.$kategori->id.'')}}">Edit</a>
                             <form action="{{ url('kategori/'.$kategori->id) }}" method="POST">
                                 @csrf <input type="hidden" name="_method" value="DELETE">
-                            <button class="btn btn-sm btn-danger" type="submit">Delete</button>
+                                <button class="btn btn-sm btn-danger" type="submit">Delete</button>
                             </form>
                         </td>
                     </tr>
@@ -159,6 +159,7 @@ https://templatemo.com/tm-589-lugx-gaming
                     <tr>
                         <th>ID</th>
                         <th>Metode</th>
+                        <th>Gambar</th>
                         <th>Biaya Admin</th>
                         <th>Action</th>
                     </tr>
@@ -169,6 +170,7 @@ https://templatemo.com/tm-589-lugx-gaming
                     <tr>
                         <td>{{ $noM }}</td>
                         <td>{{ $metode->nama_metode }}</td>
+                        <td style="width: 20%;"><img src="{{ asset('storage/' .$metode->gambar_metode) }}"></td>
                         <td>{{ $metode->biaya_administrasi }}</td>
                         <td>
                             <a class="btn btn-sm btn-primary" href="{{ url('metodeEdit/'.$metode->id.'')}}">Edit</a>

@@ -7,7 +7,7 @@ use App\Models\M_Metode;
 use Storage;    
 use File;
 
-class C_Metode extends Controller
+class C_Metode extends Controller 
 {
     /**
      * Display a listing of the resource.

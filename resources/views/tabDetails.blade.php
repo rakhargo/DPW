@@ -18,29 +18,10 @@
     <link rel="stylesheet" href="/assets/css/owl.css">
     <link rel="stylesheet" href="/assets/css/animate.css">
     <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
-<!--
 
-TemplateMo 589 lugx gaming
-
-https://templatemo.com/tm-589-lugx-gaming
-
--->
   </head>
 
 <body>
-
-  <!-- ***** Preloader Start ***** -->
-  {{-- <div id="js-preloader" class="js-preloader">
-    <div class="preloader-inner">
-      <span class="dot"></span>
-      <div class="dots">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-  </div> --}}
-  <!-- ***** Preloader End ***** -->
 
   <!-- ***** Header Area Start ***** -->
   <header class="header-area header-sticky">
@@ -95,80 +76,68 @@ https://templatemo.com/tm-589-lugx-gaming
             <input type="hidden" name="id_kategori" value="{{ $datas['condition']->id }}">
 
             <div class="col-lg-6" >
+
               <h4>1. Pilih nominal Voucher</h4>
-              <div class="row">
-                @foreach ($datas['join'] as $datajoin)
-                <div class="col-3" >
+              <div id="plant" class="product" style="padding:20px;">
+                <section id="produk">
+                  <div class="row gx-5" >
+                  @foreach ($datas['join'] as $datajoin)
+                  <div class="col-4">
                   <div class="item">
                     <div class="thumb">
-                      <input type="radio" name="voucher" value="{{ $datajoin->id . '|' . $datajoin->harga_voucher }}">
-                      {{-- <input type="hidden" name="harga_voucher" value="{{ $datajoin->harga_voucher }}"> --}}
-                      {{-- <a href=""> --}}
-                        <img src="{{ asset('storage/'.$datajoin->gambar_kategori)  }}" alt="">
-                        {{-- </a> --}}
-                      </div>
-                      <h6>{{ $datajoin->nominal_voucher }}</h6>
-                      
-                    </div>
-                </div>
-                @endforeach
-              </div>
-            
-            <div class="col-lg-6" >
-              <h4>2. Pilih Metode pembayaran</h4>
-                <div class="row">
-                  @foreach ($datas['metode'] as $datametode)
-                  <div class="col-3" >
-                    <div class="item">
-                      <div class="thumb">
-                        <input type="radio" name="metode" value="{{ $datametode->id . '|' . $datametode->biaya_administrasi }}">
-                        {{-- <input type="hidden" name="biaya_admin" value="{{ $datametode->biaya_administrasi }}"> --}}
-                        {{-- <a href=""> --}}
-                          <img src="{{ asset('storage/'.$datametode->gambar_metode)  }}" alt="">
-                          {{-- </a> --}}
+                        <h6 class="nama_produk" style="color: #fff;">{{ $datajoin->nominal_voucher }}</h6>
+                        <img src="{{ asset('storage/'.$datajoin->gambar_kategori)  }}" style="aspect-ration: 1 / 1; width:100%; " alt="">
+                        <input type="radio" id="{{ $datajoin->nominal_voucher }}" value="{{ $datajoin->id . '|' . $datajoin->harga_voucher }}" name="voucher">
+                        
+                        <label for="{{ $datajoin->nominal_voucher }}">
+                            <h6 class="nama_produk">RP. {{ number_format($datajoin->harga_voucher,0,"",".") }}</h6>
+                          </label>
                         </div>
-                        <h6>{{ $datametode->nama_metode }}</h6>
+                      </div>
+                      </div>
+                      @endforeach
                     </div>
-                  </div>
-                  @endforeach
-                </div>
+                  </section>
+              </div>
+              
+              <h4>2. Pilih Metode pembayaran</h4>
+              <div id="plant" class="product" style="padding:20px;">
+                <section id="produk">
+                  <div class="row gx-5" >
+                  @foreach ($datas['metode'] as $datametode)
+                  <div class="col-4">
+                  <div class="item">
+                    <div class="thumb">
+                        <h6 class="nama_produk" style="color: #fff;">{{ $datametode->nama_metode }}</h6>
+                        <img src="{{ asset('storage/'.$datametode->gambar_metode)  }}" style="aspect-ration: 1 / 1; width:100%; " alt="">
+                        <input type="radio" id="{{ $datametode->id }}" value="{{ $datametode->id . '|' . $datametode->biaya_administrasi }}" name="metode">
+                        
+                        <label for="{{ $datametode->id }}">
+                            <h6 class="nama_produk">RP. {{ number_format($datametode->biaya_administrasi,0,"",".") }}</h6>
+                          </label>
+                        </div>
+                      </div>
+                      </div>
+                      @endforeach
+                    </div>
+                  </section>
+              </div>
 
             <div class="col-lg-6" >
               <h4>3. Masukkan Email</h4>
                 <div class="row">
-                  <div class="col-3" >
-                    {{-- <div class="item"> --}}
-                      {{-- <div class="thumb"> --}}
-                        <input type="email" name="email">
-                        {{-- <a href=""> --}}
-                          {{-- <img src="/assets/imagesdb/{{ $datametode->gambar_metode }}" alt=""> --}}
-                        {{-- </a> --}}
-                      {{-- </div> --}}
-                    {{-- </div> --}}
+                  <div class="col-3">
+                    <div class="item" style="width: 1000%; padding-top: 10px; margin-left: 20px;">
+                      <div class="thumb" >
+                          <input type="email" class="form-control" placeholder="name@example.com">
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <br><br>
                 
-                <button type="submit" id="submitBtn"><i class="fa fa-shopping-bag"></i> ADD TO CART</button>
-                
-                {{-- <span class="price"><em>$28</em> $22</span>
-                <p>LUGX Gaming Template is based on the latest Bootstrap 5 CSS framework. This template is provided by TemplateMo and it is suitable for your gaming shop ecommerce websites. Feel free to use this for any purpose. Thank you.</p> --}}
-                {{-- <form id="qty" action="#"> --}}
-                  {{-- <div class="col-lg-6" > --}}
-                    {{-- <h4>3. </h4> --}}
-                      {{-- <div class="row"> --}}
-                      {{-- </div> --}}
-                  {{-- </div> --}}
-                    {{-- <input type="qty" class="form-control" id="1" aria-describedby="quantity" placeholder="1"> --}}
-              {{-- </form> --}}
-              {{-- <ul>
-                <li><span>Game ID:</span> COD MMII</li>
-                <li><span>Genre:</span> <a href="#">Action</a>, <a href="#">Team</a>, <a href="#">Single</a></li>
-                <li><span>Multi-tags:</span> <a href="#">War</a>, <a href="#">Battle</a>, <a href="#">Royal</a></li>
-              </ul> --}}
-            </div>
-
-            
+                <button type="submit" id="submitBtn" class="submit-btn"><i class="fa fa-shopping-bag"></i> ADD TO CART</button>
+            </div>            
 
             <div class="col-lg-12">
               <div class="sep"></div>
@@ -178,96 +147,6 @@ https://templatemo.com/tm-589-lugx-gaming
       </div>
     </form>
 
-  {{-- <div class="more-info">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="tabs-content">
-            <div class="row">
-              <div class="nav-wrapper ">
-                <ul class="nav nav-tabs" role="tablist">
-                  <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="description-tab" data-bs-toggle="tab" data-bs-target="#description" type="button" role="tab" aria-controls="description" aria-selected="true">Description</button>
-                  </li>
-                  <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="reviews-tab" data-bs-toggle="tab" data-bs-target="#reviews" type="button" role="tab" aria-controls="reviews" aria-selected="false">Reviews (3)</button>
-                  </li>
-                </ul>
-              </div>              
-              <div class="tab-content" id="myTabContent">
-                <div class="tab-pane fade show active" id="description" role="tabpanel" aria-labelledby="description-tab">
-                  <p>You can search for more templates on Google Search using keywords such as "templatemo digital marketing", "templatemo one-page", "templatemo gallery", etc. Please tell your friends about our website. If you need a variety of HTML templates, you may visit Tooplate and Too CSS websites.</p>
-                  <br>
-                  <p>Coloring book air plant shabby chic, crucifix normcore raclette cred swag artisan activated charcoal. PBR&B fanny pack pok pok gentrify truffaut kitsch helvetica jean shorts edison bulb poutine next level humblebrag la croix adaptogen. Hashtag poke literally locavore, beard marfa kogi bruh artisan succulents seitan tonx waistcoat chambray taxidermy. Same cred meggings 3 wolf moon lomo irony cray hell of bitters asymmetrical gluten-free art party raw denim chillwave tousled try-hard succulents street art.</p>
-                </div>
-                <div class="tab-pane fade" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
-                  <p>Coloring book air plant shabby chic, crucifix normcore raclette cred swag artisan activated charcoal. PBR&B fanny pack pok pok gentrify truffaut kitsch helvetica jean shorts edison bulb poutine next level humblebrag la croix adaptogen. <br><br>Hashtag poke literally locavore, beard marfa kogi bruh artisan succulents seitan tonx waistcoat chambray taxidermy. Same cred meggings 3 wolf moon lomo irony cray hell of bitters asymmetrical gluten-free art party raw denim chillwave tousled try-hard succulents street art.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> --}}
-
-  {{-- <div class="section categories related-games">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6">
-          <div class="section-heading">
-            <h6>Action</h6>
-            <h2>Related Games</h2>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="main-button">
-            <a href="shop.html">View All</a>
-          </div>
-        </div>
-        <div class="col-lg col-sm-6 col-xs-12">
-          <div class="item">
-            <h4>Action</h4>
-            <div class="thumb">
-              <a href="product-details.html"><img src="/assets/images/categories-01.jpg" alt=""></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg col-sm-6 col-xs-12">
-          <div class="item">
-            <h4>Action</h4>
-            <div class="thumb">
-              <a href="product-details.html"><img src="/assets/images/categories-05.jpg" alt=""></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg col-sm-6 col-xs-12">
-          <div class="item">
-            <h4>Action</h4>
-            <div class="thumb">
-              <a href="product-details.html"><img src="/assets/images/categories-03.jpg" alt=""></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg col-sm-6 col-xs-12">
-          <div class="item">
-            <h4>Action</h4>
-            <div class="thumb">
-              <a href="product-details.html"><img src="/assets/images/categories-04.jpg" alt=""></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg col-sm-6 col-xs-12">
-          <div class="item">
-            <h4>Action</h4>
-            <div class="thumb">
-              <a href="product-details.html"><img src="/assets/images/categories-05.jpg" alt=""></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> --}}
 
   <footer>
     <div class="container">

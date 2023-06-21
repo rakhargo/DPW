@@ -109,6 +109,9 @@ img {
   overflow: hidden;
 }
 
+table {
+  text-align: center;
+}
 /* 
 ---------------------------------------------
 Global Styles
@@ -1033,7 +1036,7 @@ Categories Style
 
  .item  {
   background-color: #383838;
-  width: 105%;
+  width: 130%;
   height: 85%;
   position: relative;
   border-radius: 25px;
@@ -1053,7 +1056,7 @@ Categories Style
   /* position: relative;
   border-radius: 25px;
   overflow: hidden; */
-  filter: blur(3px);
+  /* filter: blur(3px); */
 }
 
  .item h4 {
@@ -1591,7 +1594,7 @@ Contact PAge Style
 }
 
 input[type=radio]{
-  transform: scale(100);
+  transform: scale(1);
 }
 
 /* input[type=radio]::after{
@@ -1711,4 +1714,69 @@ body {
 
 @media (max-width: 1200px) {
   
+}
+
+.product {
+  padding-top: 90px;
+}
+
+#produk {
+  display: flex;
+  flex-flow: row wrap;
+}
+/* #produk > .voucher {
+  flex: 1;
+  padding: 0.5rem;
+} */
+#produk input[type="radio"] {
+  display: none;
+  &:not(:disabled) ~ label {
+    cursor: pointer;
+  }
+  &:disabled ~ label {
+    color: hsla(150, 5%, 75%, 1);
+    border-color: hsla(150, 5%, 75%, 1);
+    box-shadow: none;
+    cursor: not-allowed;
+  }
+}
+#produk label {
+  height: 80%;
+  display: block;
+  background: white;
+  border: 2px solid rgb(0, 149, 255);
+  border-radius: 20px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  /* margin: 1rem; */
+  text-align: center;
+  box-shadow: 0px 3px 10px -2px hsla(150, 5%, 65%, 0.5);
+  position: relative;
+}
+#produk input[type="radio"]:checked + label {
+  background: hsla(150, 75%, 50%, 1);
+  color: hsla(215, 0%, 100%, 1);
+  box-shadow: 0px 0px 20px hsla(150, 100%, 50%, 0.75);
+  /* &::after {
+    color: hsla(215, 5%, 25%, 1);
+    font-family: FontAwesome;
+    border: 2px solid hsla(150, 75%, 45%, 1);
+    content: "\f00c";
+    font-size: 24px;
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0px 2px 5px -2px hsla(0, 0%, 0%, 0.25);
+  } */
+}
+
+.nama_produk{
+  color: black;
 }
