@@ -63,7 +63,7 @@
           <div class="caption header-text">
             <h6>Welcome to VENTI</h6>
             <h2>TEMPAT TOPUP VOUCHER TERBAIK!</h2>
-            <p>Bingung topup dimana? VENTI adalah tempatnya! <br> VENTI menyediakan berbagai macam voucher dengan harga yang sangat terjangkau, dan tentu saja aman juga sudah dipercaya banyak orang. <br> <br> Tunggu apa lagi? Topup di VENTI selagi masih hidup waokawoowak</p>
+            <p>Bingung topup dimana? VENTI adalah tempatnya! <br> VENTI menyediakan berbagai macam voucher dengan harga yang sangat terjangkau, dan tentu saja aman serta sudah dipercaya banyak orang.</p>
 
           </div>
         </div>

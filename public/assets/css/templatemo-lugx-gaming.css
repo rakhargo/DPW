@@ -1193,18 +1193,19 @@ Footer Style
 */
 
 footer {
-  margin-top: 150px;
+  margin-top: 100px;
+  margin-bottom: -100px;
   background-color: #383838;
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url(../images/footerr.png);
-  min-height: 100px;
+  /* min-height: 10px; */
   border-radius: 150px 150px 0px 0px;
 }
 
 footer p {
   text-align: center;
-  line-height: 90px;
+  line-height: 70px;
   color: #fff;
   font-size: 16px;
   font-weight: 400;
