@@ -75,7 +75,7 @@ https://templatemo.com/tm-589-lugx-gaming
                       <li><a href="/">Home</a></li>
                       {{-- <li><a href="tabVoucher">Our Shop</a></li> --}}
                       <li><a href="tabLacak">Lacak pesanan</a></li>
-                      <li><a href="tabAdmin">Admin page</a></li>
+                      <li><a href="loginadm">Admin page</a></li>
                   </ul>   
                     <a class='menu-trigger'>
                         <span>Menu</span>
