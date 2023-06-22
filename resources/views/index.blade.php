@@ -1,7 +1,3 @@
-<?php
-  // use Illuminate\Support\Facades\DB;
-  // use App\Http\Controllers\C_Kategori;
-?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -63,7 +59,7 @@
           <div class="caption header-text">
             <h6>Welcome to VENTI</h6>
             <h2>TEMPAT TOPUP VOUCHER TERBAIK!</h2>
-            <p>Bingung topup dimana? VENTI adalah tempatnya! <br> VENTI menyediakan berbagai macam voucher dengan harga yang sangat terjangkau, dan tentu saja aman serta sudah dipercaya banyak orang.</p>
+            <p>Bingung topup dimana? VENTI adalah tempatnya! <br> <br> VENTI menyediakan berbagai macam voucher dengan harga yang sangat terjangkau, dan tentu saja aman serta sudah dipercaya banyak orang.</p>
 
           </div>
         </div>

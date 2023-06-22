@@ -57,7 +57,6 @@ https://templatemo.com/tm-589-lugx-gaming
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
                       <li><a href="/">Home</a></li>
-                      {{-- <li><a href="{{url('/tabVoucher')}}">Our Shop</a></li> --}}
                       <li><a href="{{url('/tabLacak')}}">Lacak pesanan</a></li>
                       <li><a href="{{url('loginadm/logout')}}">Logout</a></li>
                       <li><a href="{{url('/tabAdmin')}}">Admin page</a></li>
@@ -85,12 +84,11 @@ https://templatemo.com/tm-589-lugx-gaming
   </div>
     <div class="section trending">
         <div class="container">
-            <h1>Table Voucher Kategori {{ $title }}</h1><a href="{{url('voucherCreate/'.$idkat.'')}}">Create</a>
+            <h1>Table Voucher Kategori {{ $title }}</h1><a href="{{url('voucherCreate/'.$idkat.'')}}" class="create">Create</a>
             <table class="table">
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Kategori</th>
                         <th>Nominal</th>
                         <th>Harga</th>
                         <th>Action</th>
@@ -101,9 +99,8 @@ https://templatemo.com/tm-589-lugx-gaming
                     @foreach ($listVoucher as $voucher)
                     <tr>
                         <td>{{ $noV }}</td>
-                        <td>{{ $voucher->id_kategori }}</td>
                         <td>{{ $voucher->nominal_voucher }}</td>
-                        <td>{{ $voucher->harga_voucher }}</td>
+                        <td>RP. {{ number_format($voucher->harga_voucher,0,"",".") }}</td>
                         <td>
                             <a class="btn btn-sm btn-primary"href="{{ url('voucherEdit/'.$voucher->id.'/'.$voucher->id_kategori)}}">Edit</a>
                             <form action="{{ url('voucher/'.$voucher->id) }}" method="POST">

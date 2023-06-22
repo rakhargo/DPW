@@ -85,15 +85,16 @@ https://templatemo.com/tm-589-lugx-gaming
   </div>
     
 <div class="container">
-    <h1>Create Kategori Voucher Baru</h1>
+    <h1>Create Kategori Voucher Baru</h1><br>
     <form action="{{ url('kategori') }}" method="POST" enctype="multipart/form-data">
         @csrf 
         <div class="form-group">
             <label for="nameInput">Nama</label>
             <input type="text" class="form-control" id="nameInput" placeholder="Enter Name" name="nama_kategori" required>
         </div>
+        <br>
         <div class="form-group">
-            <label for="imageInput">Foto</label>
+            <label for="imageInput">Gambar Kategori (Minimal 1.000 x 1.000, usahakan PNG)</label>
             <input type="file" class="form-control" id="imageInput" placeholder="Upload Image" name="gambar_kategori" required>
         </div>
         <br/>

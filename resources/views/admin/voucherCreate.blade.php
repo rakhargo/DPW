@@ -92,13 +92,15 @@ https://templatemo.com/tm-589-lugx-gaming
             <label for="nominalInput">Nominal</label>
             <input type="text" class="form-control" id="nominalInput" placeholder="Nominal" name="nominal_voucher" required>
         </div>
+        <br>
         <div class="form-group">
-            <label for="priceInput">Harga Voucher</label>
-            <input type="text" class="form-control" id="priceInput" placeholder="Harga" name="harga_voucher" required>
+          <label for="priceInput">Harga Voucher</label>
+          <input type="text" class="form-control" id="priceInput" placeholder="Harga" name="harga_voucher" required>
         </div>
+        <br>
         <div class="form-group">
-            <label for="kategori">ID Kategori {{ $kategori->nama_kategori }}</label>
-            <input type="text" class="form-control" id="kategori" value="{{ $kategori->id }}" name="id_kategori" >
+            {{-- <label for="kategori">ID Kategori {{ $kategori->nama_kategori }}</label> --}}
+            <input type="text" class="form-control" id="kategori" value="{{ $kategori->id }}" name="id_kategori" hidden>
         </div>
         <br/>
         <button type="submit" class="btn btn-primary">Submit</button>

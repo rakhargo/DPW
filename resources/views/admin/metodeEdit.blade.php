@@ -95,15 +95,17 @@ https://templatemo.com/tm-589-lugx-gaming
             <label for="nameInput">Nama</label>
             <input type="text" class="form-control" id="nameInput" name="nama_metode" value="{{ $model->nama_metode }}" required>
         </div>
+        <br>
         <div class="form-group">
             <label for="priceInput">Biaya Administrasi</label>
             <input type="text" class="form-control" id="priceInput" name="biaya_administrasi" value="{{ $model->biaya_administrasi }}" required>
         </div>
+        <br>
         <div class="form-group">
-          <label for="pictureInput">Gambar Metode</label>
+          <label for="pictureInput">Gambar Metode (Minimal 1.000 x 1.000, usahakan PNG)</label>
           <input type="file" class="form-control" id="pictureInput" name="gambar_metode" required>
       </div>
-        <br/>
+        <br>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 </div>
