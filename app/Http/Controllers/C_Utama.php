@@ -26,7 +26,6 @@ class C_Utama extends Controller
     {
         $listKategori = M_Kategori::all();
         $listMetode = M_Metode::all();
-        // $listPesanan = M_Pesanan::all();
         $listPesanan = M_Pesanan::join('t_voucher', 't_pesanan.id_voucher', '=', 't_voucher.id')
         ->join('t_kategori', 't_pesanan.id_kategori', '=', 't_kategori.id')
         ->join('t_metode', 't_pesanan.id_metode', '=', 't_metode.id')
@@ -80,13 +79,10 @@ class C_Utama extends Controller
             'nama_kategori' => 'required',
             'gambar_kategori' => 'required|image|mimes:jpeg,png,jpg|max:2048',
         ]);
-        // $imageName = time().'.'.$request->gambar_kategori->extension();
-        // $request->gambar_kategori->move(public_path('assets/imagesdb/'), $imageName);
         
         $model = new M_Kategori;
         $model->nama_kategori = $request->nama_kategori;
         $model->gambar_kategori = $request->file('gambar_kategori')->store('gambar_kategori');
-        // $model->gambar_kategori = $imageName;
 
         $model->save();
         return redirect('/tabAdmin');
@@ -114,24 +110,12 @@ class C_Utama extends Controller
      */
     public function update(Request $request, string $id)
     {
-        // $request->validate([
-        //     'nama_kategori' => 'required',
-        //     'gambar_kategori' => 'required|image|mimes:jpeg,png,jpg|max:2048',
-        // ]);
-
         $model = M_Kategori::find($id);
         $model->nama_kategori = $request->nama_kategori;
         // $model->gambar_kategori = $request->gambar_kategori;
         Storage::delete($model->gambar_kategori);
         
         $model->gambar_kategori = $request->file('gambar_kategori')->store('gambar_kategori');
-
-        // echo $request->hasFile('gambar_kategori');
-        // if ($request->hasFile('gambar_kategori')) {
-        //     $imageName = time().'.'.$request->gambar_kategori->extension();
-        //     $request->gambar_kategori->move(public_path('assets/imagesdb/'), $imageName);
-        //     $model->gambar_kategori = $imageName;
-        // }
 
         $model->save();
         return redirect('/tabAdmin');
@@ -143,8 +127,7 @@ class C_Utama extends Controller
     public function destroy(string $id)
     {
         $model = M_Kategori::find($id);
-        // $image_path = public_path('/assets/imagesdb/'.$model->gambar_kategori);
-        // File::delete($image_path);
+
         Storage::delete($model->gambar_kategori);
         $model->delete();
         return redirect('/tabAdmin');

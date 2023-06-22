@@ -75,7 +75,7 @@
               <h2>{{ $datas['condition']->nama_kategori }} - Indonesia</h2>
               <p align="justify" style="padding-right: 80px;">
                 Harga sudah termasuk PPN. Informasi tambahan, untuk transaksi menggunakan Pulsa akan dikenakan biaya tambahan pajak.
-                <br><br>Beli {{ $datas['condition']->nama_kategori }} hanya dalam hitungan detik! Cukup masukan jumlah saldo {{ $datas['condition']->nama_kategori }} yang Anda inginkan, pilih metode pembayaran dan selesaikan transaksi Anda. Kemudian Anda akan mendapatkan {{ $datas['condition']->nama_kategori }} pada pesan konfirmasi pembayaran via email.
+                <br><br>Beli {{ $datas['condition']->nama_kategori }} hanya dalam hitungan detik! Cukup masukan jumlah saldo {{ $datas['condition']->nama_kategori }} yang Anda inginkan, pilih metode pembayaran dan selesaikan transaksi Anda. Kemudian Anda akan mendapatkan Kode {{ $datas['condition']->nama_kategori }} setelah selesai bayar.
               </p>
             </div>
             <input type="hidden" name="id_kategori" value="{{ $datas['condition']->id }}">

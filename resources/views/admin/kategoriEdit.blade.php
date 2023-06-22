@@ -85,7 +85,7 @@ https://templatemo.com/tm-589-lugx-gaming
   </div>
     
 <div class="container">
-    <h1>Edit Kategori Voucher</h1>
+    <h1>Edit Kategori Voucher</h1><br><br>
     <form action="{{ url('kategori/'.$model->id) }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="thumb">
@@ -97,11 +97,12 @@ https://templatemo.com/tm-589-lugx-gaming
             <label for="nameInput">Nama</label>
             <input type="text" class="form-control" id="nameInput" name="nama_kategori" value="{{ $model->nama_kategori }}" required>
         </div>
+        <br>
         <div class="form-group">
-            <label for="gambarInput">Gambar Kategori</label>
+            <label for="gambarInput">Gambar Kategori (Minimal 1.000 x 1.000, usahakan PNG)</label>
             <input type="file" class="form-control" id="gambarInput" name="gambar_kategori" required>
-        </div>
-        <br/>
+          </div>
+          <br>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 </div>

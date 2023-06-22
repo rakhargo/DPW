@@ -73,7 +73,6 @@ class C_Metode extends Controller
         $model->biaya_administrasi = $request->biaya_administrasi;
         Storage::delete($model->gambar_metode);
 
-        // $model->gambar_metode = $request->gambar_metode;
         $model->gambar_metode = $request->file('gambar_metode')->store('gambar_metode');
 
         $model->save();

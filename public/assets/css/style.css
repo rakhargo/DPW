@@ -261,48 +261,6 @@ Pre-loader Style
   }
 }
 
-.preloader-inner {
-  position: relative;
-  width: 142px;
-  height: 40px;
-  background: transparent;
-}
-
-.preloader-inner .dot {
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  top: 12px;
-  left: 15px;
-  background: #0071f8;
-  border-radius: 50%;
-  -webkit-transform: translateX(0);
-  transform: translateX(0);
-  -webkit-animation: dot 2.8s infinite;
-  animation: dot 2.8s infinite;
-}
-
-.preloader-inner .dots {
-  -webkit-transform: translateX(0);
-  transform: translateX(0);
-  margin-top: 12px;
-  margin-left: 31px;
-  -webkit-animation: dots 2.8s infinite;
-  animation: dots 2.8s infinite;
-}
-
-.preloader-inner .dots span {
-  display: block;
-  float: left;
-  width: 16px;
-  height: 16px;
-  margin-left: 16px;
-  background: #0071f8;
-  border-radius: 50%;
-}
-
-
-
 /* 
 ---------------------------------------------
 Header Style
@@ -1089,102 +1047,6 @@ Categories Style
   margin-bottom: 0px;
 }
 
-/* 
----------------------------------------------
-CTA Style
---------------------------------------------- 
-*/
-
-.cta {
-  position: relative;
-}
-
-.cta::after {
-  background-image: url(../images/cta-bg.jpg);
-  max-width: 550px;
-  max-height: 510px;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  content: '';
-  border-radius: 25px;
-  left: 50%;
-  transform: translateX(-275px);
-  top: 0;
-  z-index: -1;
-}
-
-.cta .shop {
-  margin-top: 80px;
-  background-color: #f7f7f7;
-  border-radius: 25px;
-  padding: 80px;
-}
-
-.cta .shop .section-heading {
-  margin-right: 30px;
-  margin-bottom: 50px;
-}
-
-.cta .shop p {
-  font-weight: 600;
-  font-size: 16px;
-}
-
-.cta .shop .main-button {
-  margin-top: 50px;
-}
-
-.cta .subscribe {
-  background-color: #f7f7f7;
-  border-radius: 25px;
-  padding: 80px 60px;
-}
-
-.cta .subscribe .section-heading {
-  margin-bottom: 50px;
-}
-
-.cta .subscribe form {
-  position: relative;
-  max-width: 100%;
-}
-
-.cta .subscribe form input {
-  max-width: 100%;
-  width: 100%;
-  height: 50px;
-  outline: none;
-  border-radius: 25px;
-  background-color: #fff;
-  border: none;
-  padding: 0px 25px;
-  font-size: 14px;
-  color: #7a7a7a;
-}
-
-.cta .subscribe form button {
-  display: inline-block;
-  height: 50px;
-  line-height: 50px;
-  background-color: #ee626b;
-  color: #fff;
-  font-size: 15px;
-  text-transform: uppercase;
-  font-weight: 500;
-  padding: 0px 25px;
-  border: none;
-  border-radius: 25px;
-  position: absolute;
-  right: 0;
-  top: 0;
-  transition: all .3s;
-}
-
-.cta .subscribe form button:hover {
-  background-color: #0071f8;
-}
-
 
 /* 
 ---------------------------------------------
@@ -1193,18 +1055,18 @@ Footer Style
 */
 
 footer {
-  margin-top: 150px;
+  margin-top: 100px;
+  margin-bottom: -100px;
   background-color: #383838;
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url(../images/footerr.png);
-  min-height: 100px;
   border-radius: 150px 150px 0px 0px;
 }
 
 footer p {
   text-align: center;
-  line-height: 90px;
+  line-height: 70px;
   color: #fff;
   font-size: 16px;
   font-weight: 400;
@@ -1555,19 +1417,9 @@ Single Page Style
   padding-right: 0px;
 }
 
-.tabs-content .nav-tabs .nav-link.active {
-  color: #0071f8;
-}
-
 .tabs-content .tab-content {
   margin-top: 30px;
 }
-
-.related-games .main-button {
-  text-align: right;
-  margin-top: 32px;
-}
-
 
 /* 
 ---------------------------------------------
@@ -1580,7 +1432,6 @@ Contact PAge Style
 }
 
 .contact-page form input {
-  /* max-width: 450px; */
   width: 400%;
   height: 50px;
   outline: none;
@@ -1605,7 +1456,6 @@ Contact PAge Style
   border: none;
   border-radius: 25px;
   position: absolute;
-  /* right: 0; */
   top: 0;
   transition: all .3s;
   margin-left: 987px;
@@ -1619,12 +1469,7 @@ input[type=radio]{
   transform: scale(1);
 }
 
-/* input[type=radio]::after{
-  background-color: #0071f8;
-} */
-
 .contact-page input[type=text] {
-  /* background-color: white; */
   background-image: url(../images/search.png);
   background-position: 10px 10px;
   background-repeat: no-repeat;
@@ -1649,7 +1494,6 @@ input[type=radio]{
   border: none;
   border-radius: 25px;
   transition: all .3s;
-  /* text-align: rigth; */
 }
 
 .contact-page button i, .contact-page a i {
@@ -1801,24 +1645,6 @@ body {
   background: hsla(150, 75%, 50%, 1);
   color: hsla(215, 0%, 100%, 1);
   box-shadow: 0px 0px 20px hsla(150, 100%, 50%, 0.75);
-  /* &::after {
-    color: hsla(215, 5%, 25%, 1);
-    font-family: FontAwesome;
-    border: 2px solid hsla(150, 75%, 45%, 1);
-    content: "\f00c";
-    font-size: 24px;
-    position: absolute;
-    top: -25px;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 50px;
-    width: 50px;
-    line-height: 50px;
-    text-align: center;
-    border-radius: 50%;
-    background: white;
-    box-shadow: 0px 2px 5px -2px hsla(0, 0%, 0%, 0.25);
-  } */
 }
 
 .nama_produk{
@@ -1838,7 +1664,6 @@ body {
     border: solid 1px #222222;
     color: white;
     padding: 10px;
-    /* text-align: left; */
     text-decoration: none;
 }
 .table tbody td {
@@ -1855,7 +1680,3 @@ body {
   transition: 0.3s;
   padding: 5px;
 }
-
-/* .create:hover {
-  background-color: #383838;
-} */

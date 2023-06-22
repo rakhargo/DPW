@@ -85,19 +85,21 @@ https://templatemo.com/tm-589-lugx-gaming
   </div>
     
 <div class="container">
-    <h1>Create Metode Pembayaran Baru</h1>
+    <h1>Create Metode Pembayaran Baru</h1><br><br>
     <form action="{{ url('metode') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
             <label for="nameInput">Nama</label>
             <input type="text" class="form-control" id="nameInput" placeholder="Nama Metode" name="nama_metode" required>
         </div>
+        <br>
         <div class="form-group">
             <label for="priceInput">Biaya Administrasi</label>
             <input type="text" class="form-control" id="priceInput" placeholder="Biaya Administrasi" name="biaya_administrasi" required>
         </div>
+        <br>
         <div class="form-group">
-            <label for="pictureInput">Gambar Metode</label>
+            <label for="pictureInput">Gambar Metode (Minimal 1.000 x 1.000, usahakan PNG)</label>
             <input type="file" class="form-control" id="pictureInput" name="gambar_metode" required>
         </div>
         <br/>
