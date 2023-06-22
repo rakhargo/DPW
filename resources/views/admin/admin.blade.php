@@ -145,6 +145,7 @@
                 <thead>
                     <tr>
                         <th>NO</th>
+                        <th>Nomor Pesanan</th>
                         <th>Kategori</th>
                         <th>Nominal</th>
                         <th>Metode</th>
@@ -158,6 +159,7 @@
                     @foreach ($listPesanan as $pesanan)
                     <tr>
                         <td>{{ $noP }}</td>
+                        <td>INV-{{ $pesanan->id }}</td>
                         <td>{{ $pesanan->nama_kategori }}</td>
                         <td>{{ $pesanan->nominal_voucher }}</td>
                         <td>{{ $pesanan->nama_metode }}</td>
