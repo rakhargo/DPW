@@ -1,23 +1,22 @@
-{{-- @dd($model) --}}
 <?php
   use Illuminate\Support\Str; 
   function generateSteamWalletCode()
   {
-      $codeLength = 16; // Total panjang kode
-      $sectionLength = 4; // Panjang setiap bagian kode
-      $alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'; // Huruf abjad besar yang tersedia
-      $sections = []; // Array untuk menyimpan setiap bagian kode
+      $codeLength = 16;
+      $sectionLength = 4;
+      $alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+      $sections = [];
 
-      // Generate setiap bagian kode dengan panjang yang diinginkan
-      for ($i = 0; $i < $codeLength; $i += $sectionLength) {
+      for ($i = 0; $i < $codeLength; $i += $sectionLength) 
+      {
           $section = '';
-          for ($j = 0; $j < $sectionLength; $j++) {
+          for ($j = 0; $j < $sectionLength; $j++) 
+          {
               $section .= $alphabet[random_int(0, strlen($alphabet) - 1)];
           }
-          $sections[] = $section; // Tambahkan bagian kode ke dalam array
+          $sections[] = $section;
       }
 
-      // Gabungkan setiap bagian kode dengan tanda "-"
       $randomCode = implode('-', $sections);
 
       return $randomCode;
