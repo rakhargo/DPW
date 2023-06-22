@@ -21,20 +21,10 @@
     <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-<!--
-
-TemplateMo 589 lugx gaming
-
-https://templatemo.com/tm-589-lugx-gaming
-
--->
+    
   </head>
 
 <body>
-
-  <!-- ***** Preloader Start ***** -->
-  <!-- ***** Preloader End ***** -->
-
   <!-- ***** Header Area Start ***** -->
   <header class="header-area header-sticky">
     <div class="container">

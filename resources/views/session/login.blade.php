@@ -18,52 +18,7 @@
   <link rel="stylesheet" href="assets/css/owl.css">
   <link rel="stylesheet" href="assets/css/animate.css">
   <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
-  <style>
-
-
-    .login-container {
-      width: 300px;
-      margin-top: 7%;
-      margin-left: 37%;
-      padding: 20px;
-      background-color: #383838;
-      border: 1px solid #ccc;
-      border-radius: 25px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      text-align: center;
-    }
-
-    .login-container h2 {
-      text-align: center;
-      margin-bottom: 20px;
-      color: #fff;
-    }
-
-    .login-container input[type="text"],
-    .login-container input[type="email"],
-    .login-container input[type="password"] {
-      width: 92%;
-      padding: 10px;
-      margin-bottom: 10px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-
-    .login-container input[type="submit"] {
-      width: 100%;
-      padding: 10px;
-      background-color: #ee626b;
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-
-    .login-container input[type="submit"]:hover {
-      background-color: #77bbc7;
-    }
-  </style>
- 
+  
 </head>
 <body>
 

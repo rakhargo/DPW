@@ -1,28 +1,3 @@
-<?php
-  use Illuminate\Support\Str; 
-  function generateSteamWalletCode()
-  {
-      $codeLength = 16;
-      $sectionLength = 4;
-      $alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-      $sections = [];
-
-      for ($i = 0; $i < $codeLength; $i += $sectionLength) 
-      {
-          $section = '';
-          for ($j = 0; $j < $sectionLength; $j++) 
-          {
-              $section .= $alphabet[random_int(0, strlen($alphabet) - 1)];
-          }
-          $sections[] = $section;
-      }
-
-      $randomCode = implode('-', $sections);
-
-      return $randomCode;
-  }
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -44,19 +19,10 @@
     <link rel="stylesheet" href="assets/css/owl.css">
     <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
-<!--
 
-TemplateMo 589 lugx gaming
-
-https://templatemo.com/tm-589-lugx-gaming
-
--->
   </head>
 
 <body>
-
-  <!-- ***** Preloader Start ***** -->
-  <!-- ***** Preloader End ***** -->
 
   <!-- ***** Header Area Start ***** -->
   <header class="header-area header-sticky">
@@ -128,7 +94,7 @@ https://templatemo.com/tm-589-lugx-gaming
           <hr>
           <tr>
             <td>KODE {{ $kategori->nama_kategori }}</td>
-            <th style="text-align: right;"><h5 style="color: #fff;">{{ generateSteamWalletCode() }}</h5></th>
+            <th style="text-align: right;"><h5 style="color: #fff;">{{ $randomCode }}</h5></th>
           </tr>
           <tr>
             <td>Kategori</td>

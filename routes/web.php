@@ -40,6 +40,7 @@ Route::resource('/pesanan', C_Pesanan::class);
 Route::resource('/metode', C_Metode::class);
 Route::resource('/voucher', C_Voucher::class);
 
+// Route::resource('generate', [C_Utama::class, 'generateCode']);
 Route::get('/tabVoucher', function () {
     return view('tabVoucher');
 });

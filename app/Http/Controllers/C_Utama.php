@@ -7,6 +7,7 @@ use App\Models\M_Kategori;
 use App\Models\M_Voucher;
 use App\Models\M_Pesanan;
 use App\Models\M_Metode;
+use Illuminate\Support\Str; 
 use Storage;
 use File;
 use Auth;
@@ -52,7 +53,7 @@ class C_Utama extends Controller
         $data_metode = M_Metode::all();
         $datas = [
             'join' => $data_join,
-            'condition' => $data_condition,
+            'condition' => $data_condition, 
             'metode' => $data_metode
         ];
         return view('tabDetails', compact('datas')); // buat return ke index dengan passing parameter
@@ -132,4 +133,5 @@ class C_Utama extends Controller
         $model->delete();
         return redirect('/tabAdmin');
     }
+    
 }

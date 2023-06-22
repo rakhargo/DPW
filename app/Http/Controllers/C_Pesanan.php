@@ -81,8 +81,25 @@ class C_Pesanan extends Controller
         $metode   = M_Metode::where('id', $request->metode)->first();
         $voucher  = M_Voucher::where('id', $request->voucher)->first();
 
+        $codeLength = 16;
+        $sectionLength = 4;
+        $alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $sections = [];
+
+        for ($i = 0; $i < $codeLength; $i += $sectionLength) 
+        {
+            $section = '';
+            for ($j = 0; $j < $sectionLength; $j++) 
+            {
+                $section .= $alphabet[random_int(0, strlen($alphabet) - 1)];
+            }
+            $sections[] = $section;
+        }
+
+        $randomCode = implode('-', $sections);
+        
         $model->save();
-        return view('tabInvoice', compact('model', 'kategori', 'metode', 'voucher'));
+        return view('tabInvoice', compact('model', 'kategori', 'metode', 'voucher', 'randomCode'));
         // return redirect('/');
     }
 
